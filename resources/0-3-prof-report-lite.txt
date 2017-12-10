@@ -1,0 +1,31 @@
+Statistical profiling result from ./isolate-0x277cce0-v8.log, (3099 ticks, 199 unaccounted, 0 excluded).
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+    429   13.8%   14.0%  Stub: StringAddStub_CheckNone_NotTenured
+    206    6.6%    6.7%  LazyCompile: *derez /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:46:27
+...
+
+
+ [Summary]:
+   ticks  total  nonlib   name
+   1042   33.6%   34.0%  JavaScript
+   1828   59.0%   59.6%  C++
+    183    5.9%    6.0%  GC
+     30    1.0%          Shared libraries
+    199    6.4%          Unaccounted
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+    429   13.8%  Stub: StringAddStub_CheckNone_NotTenured
+    429  100.0%    LazyCompile: *derez /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:46:27
+    429  100.0%      Function: ~decycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:24:33
+    429  100.0%        Function: ~runCpuIntensiveTask /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:18:29
+    429  100.0%          Function: ~<anonymous> /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:1:11
+    429  100.0%            Function: ~Module._compile module.js:530:37
+...
+

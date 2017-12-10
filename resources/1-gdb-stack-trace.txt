@@ -1,0 +1,1195 @@
+
+==== JS stack trace =========================================
+
+Security context: 0x165eaf71cef1 <JSObject>#0#
+    1: infLoopFunc [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/app1.js:~18] [pc=0x2a589a63c40e](this=0x14c6c43090d9 <JSGlobal Object>#1#)
+    3: /* anonymous */ [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/app1.js:13] [bytecode=0x3315247521b1 offset=5](this=0x14c6c43090d9 <JSGlobal Object>#1#,req=0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#,res=0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#,next=0x21290f0c2a39 <JSFunction next (sfi = 0xba09e2b3be1)>#4#)
+    5: handle_request(aka handle) [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/router/layer.js:95] [bytecode=0xba09e2b0149 offset=42](this=0x111c6c5f6489 <Layer map = 0xfe787104511>#5#,req=0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#,res=0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#,next=0x21290f0c2a39 <JSFunction next (sfi = 0xba09e2b3be1)>#4#)
+    7: next(aka next) [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/router/route.js:137] [bytecode=0xba09e2b3fe9 offset=160](this=0x165eaf702241 <undefined>,err=0x165eaf702241 <undefined>)
+    8: arguments adaptor frame: 0->1
+   10: dispatch [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/router/route.js:112] [bytecode=0xba09e2b3d01 offset=123](this=0x111c6c5f5719 <Route map = 0xfe7871044b9>#6#,req=0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#,res=0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#,done=0x21290f0c0cf1 <JSFunction next (sfi = 0xba09e2ac1c9)>#7#)
+   12: handle_request(aka handle) [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/router/layer.js:95] [bytecode=0xba09e2b0149 offset=42](this=0x111c6c5f5b69 <Layer map = 0xfe787104359>#8#,req=0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#,res=0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#,next=0x21290f0c0cf1 <JSFunction next (sfi = 0xba09e2ac1c9)>#7#)
+   14: /* anonymous */(aka /* anonymous */) [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/router/index.js:281] [bytecode=0xba09e2af839 offset=56](this=0x165eaf702241 <undefined>,err=0x165eaf702241 <undefined>)
+   15: arguments adaptor frame: 0->1
+   17: process_params [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/router/index.js:335] [bytecode=0xba09e2af609 offset=74](this=0x111c6c5f0ee9 <JSFunction router (sfi = 0x1523f726dd61)>#9#,layer=0x111c6c5f5b69 <Layer map = 0xfe787104359>#8#,called=0x21290f0c0e19 <Object map = 0x3db151304829>#10#,req=0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#,res=0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#,done=0x21290f0c2851 <JSFunction (sfi = 0xba09e2ad2e9)>#11#)
+   19: next(aka next) [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/router/index.js:275] [bytecode=0xba09e2ad451 offset=641](this=0x165eaf702241 <undefined>,err=0x165eaf702241 <undefined>)
+   20: arguments adaptor frame: 0->1
+   22: expressInit(aka expressInit) [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/middleware/init.js:40] [bytecode=0xba09e2b1d59 offset=140](this=0x165eaf702241 <undefined>,req=0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#,res=0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#,next=0x21290f0c0cf1 <JSFunction next (sfi = 0xba09e2ac1c9)>#7#)
+   24: handle_request(aka handle) [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/router/layer.js:95] [bytecode=0xba09e2b0149 offset=42](this=0x111c6c5f3bd9 <Layer map = 0xfe787104359>#12#,req=0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#,res=0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#,next=0x21290f0c0cf1 <JSFunction next (sfi = 0xba09e2ac1c9)>#7#)
+   26: trim_prefix(aka trim_prefix) [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/router/index.js:317] [bytecode=0xba09e2afaf1 offset=363](this=0x165eaf702241 <undefined>,layer=0x111c6c5f3bd9 <Layer map = 0xfe787104359>#12#,layerError=0x165eaf702241 <undefined>,layerPath=0x165eaf7027f1 <String[0]: >,path=0x21290f0bf7b1 <String[8]: /infLoop>)
+   28: /* anonymous */(aka /* anonymous */) [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/router/index.js:284] [bytecode=0xba09e2af839 offset=84](this=0x165eaf702241 <undefined>,err=0x165eaf702241 <undefined>)
+   29: arguments adaptor frame: 0->1
+   31: process_params [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/router/index.js:335] [bytecode=0xba09e2af609 offset=74](this=0x111c6c5f0ee9 <JSFunction router (sfi = 0x1523f726dd61)>#9#,layer=0x111c6c5f3bd9 <Layer map = 0xfe787104359>#12#,called=0x21290f0c0e19 <Object map = 0x3db151304829>#10#,req=0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#,res=0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#,done=0x21290f0c1c49 <JSFunction (sfi = 0xba09e2ad2e9)>#13#)
+   33: next(aka next) [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/router/index.js:275] [bytecode=0xba09e2ad451 offset=641](this=0x165eaf702241 <undefined>,err=0x165eaf702241 <undefined>)
+   34: arguments adaptor frame: 0->1
+   36: query(aka query) [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/middleware/query.js:45] [bytecode=0xba09e2b0331 offset=47](this=0x165eaf702241 <undefined>,req=0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#,res=0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#,next=0x21290f0c0cf1 <JSFunction next (sfi = 0xba09e2ac1c9)>#7#)
+   38: handle_request(aka handle) [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/router/layer.js:95] [bytecode=0xba09e2b0149 offset=42](this=0x111c6c5f2a01 <Layer map = 0xfe787104359>#14#,req=0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#,res=0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#,next=0x21290f0c0cf1 <JSFunction next (sfi = 0xba09e2ac1c9)>#7#)
+   40: trim_prefix(aka trim_prefix) [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/router/index.js:317] [bytecode=0xba09e2afaf1 offset=363](this=0x165eaf702241 <undefined>,layer=0x111c6c5f2a01 <Layer map = 0xfe787104359>#14#,layerError=0x165eaf702241 <undefined>,layerPath=0x165eaf7027f1 <String[0]: >,path=0x21290f0bf7b1 <String[8]: /infLoop>)
+   42: /* anonymous */(aka /* anonymous */) [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/router/index.js:284] [bytecode=0xba09e2af839 offset=84](this=0x165eaf702241 <undefined>,err=0x165eaf702241 <undefined>)
+   43: arguments adaptor frame: 0->1
+   45: process_params [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/router/index.js:335] [bytecode=0xba09e2af609 offset=74](this=0x111c6c5f0ee9 <JSFunction router (sfi = 0x1523f726dd61)>#9#,layer=0x111c6c5f2a01 <Layer map = 0xfe787104359>#14#,called=0x21290f0c0e19 <Object map = 0x3db151304829>#10#,req=0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#,res=0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#,done=0x21290f0c1579 <JSFunction (sfi = 0xba09e2ad2e9)>#15#)
+   47: next(aka next) [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/router/index.js:275] [bytecode=0xba09e2ad451 offset=641](this=0x165eaf702241 <undefined>,err=0x165eaf702241 <undefined>)
+   48: arguments adaptor frame: 0->1
+   50: handle [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/router/index.js:174] [bytecode=0xba09e2ac4c1 offset=274](this=0x111c6c5f0ee9 <JSFunction router (sfi = 0x1523f726dd61)>#9#,req=0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#,res=0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#,out=0x21290f0c0c01 <JSFunction (sfi = 0xba09e2abdd9)>#16#)
+   52: handle [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/application.js:174] [bytecode=0xba09e2ab999 offset=116](this=0x111c6c5e76c9 <JSFunction app (sfi = 0x1523f7266d41)>#17#,req=0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#,res=0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#,callback=0x165eaf702241 <undefined>)
+   54: app [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/express.js:39] [bytecode=0xba09e2ab7a1 offset=20](this=0x111c6c5ef611 <Server map = 0xfe787105171>#18#,req=0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#,res=0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#,next=0x165eaf702241 <undefined>)
+   55: arguments adaptor frame: 2->3
+   57: emitTwo(aka emitTwo) [events.js:125] [bytecode=0x27727393a951 offset=24](this=0x165eaf702241 <undefined>,handler=0x111c6c5e76c9 <JSFunction app (sfi = 0x1523f7266d41)>#17#,isFn=0x165eaf7022c1 <true>,self=0x111c6c5ef611 <Server map = 0xfe787105171>#18#,arg1=0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#,arg2=0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#)
+   59: emit [events.js:213] [bytecode=0x27727393a1f1 offset=362](this=0x111c6c5ef611 <Server map = 0xfe787105171>#18#,type=0x56d2a3d7299 <String[7]: request>)
+   60: arguments adaptor frame: 3->1
+   62: parserOnIncoming(aka parserOnIncoming) [_http_server.js:602] [bytecode=0xba09e2a8e09 offset=502](this=0x165eaf702241 <undefined>,server=0x111c6c5ef611 <Server map = 0xfe787105171>#18#,socket=0x21290f0bd541 <Socket map = 0xfe787110749>#19#,state=0x21290f0be649 <Object map = 0xfe7871099f9>#20#,req=0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#,keepAlive=0x165eaf7022c1 <true>)
+   64: parserOnHeadersComplete [_http_common.js:116] [bytecode=0xba09e2a5869 offset=324](this=0x21290f0a22a1 <HTTPParser map = 0xfe787109a51>#21#,versionMajor=1,versionMinor=1,headers=0x21290f0bef49 <JSArray[22]>#22#,method=3,url=0x21290f0bf7b1 <String[8]: /infLoop>,statusCode=0x165eaf702241 <undefined>,statusMessage=0x165eaf702241 <undefined>,upgrade=0x165eaf7022f1 <false>,shouldKeepAlive=0x165eaf7022c1 <true>)
+
+==== Details ================================================
+
+[1]: infLoopFunc [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/app1.js:~18] [pc=0x2a589a63c40e](this=0x14c6c43090d9 <JSGlobal Object>#1#) {
+// optimized frame
+--------- s o u r c e   c o d e ---------
+function infLoopFunc() {\x0a    //this will lock server\x0a    while(1) {;}\x0a}
+-----------------------------------------
+}
+[3]: /* anonymous */ [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/app1.js:13] [bytecode=0x3315247521b1 offset=5](this=0x14c6c43090d9 <JSGlobal Object>#1#,req=0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#,res=0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#,next=0x21290f0c2a39 <JSFunction next (sfi = 0xba09e2b3be1)>#4#) {
+  // expression stack (top to bottom)
+  [02] : 0x165eaf702241 <undefined>
+  [01] : 0x165eaf702241 <undefined>
+  [00] : 0xc15b862f959 <JSFunction infLoopFunc (sfi = 0x277273948059)>#23#
+--------- s o u r c e   c o d e ---------
+function (req, res, next) {\x0a    infLoopFunc();\x0a    //code will never get here\x0a    res.json({'res': "ok"});\x0a}
+-----------------------------------------
+}
+
+[5]: handle_request(aka handle) [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/router/layer.js:95] [bytecode=0xba09e2b0149 offset=42](this=0x111c6c5f6489 <Layer map = 0xfe787104511>#5#,req=0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#,res=0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#,next=0x21290f0c2a39 <JSFunction next (sfi = 0xba09e2b3be1)>#4#) {
+  // stack-allocated locals
+  var fn = 0x111c6c5f5691 <JSFunction (sfi = 0x2772739481e9)>#24#
+  // expression stack (top to bottom)
+  [06] : 0x21290f0c2a39 <JSFunction next (sfi = 0xba09e2b3be1)>#4#
+  [05] : 0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#
+  [04] : 0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#
+  [03] : 0x165eaf702241 <undefined>
+  [02] : 0x1fffed749639 <FixedArray[9]>#25#
+  [01] : 0x1155323b3059 <JSFunction handle (sfi = 0x1155323b1959)>#26#
+--------- s o u r c e   c o d e ---------
+function handle(req, res, next) {\x0a  var fn = this.handle;\x0a\x0a  if (fn.length > 3) {\x0a    // not a standard request handler\x0a    return next();\x0a  }\x0a\x0a  try {\x0a    fn(req, res, next);\x0a  } catch (err) {\x0a    next(err);\x0a  }\x0a}
+-----------------------------------------
+}
+
+[7]: next(aka next) [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/router/route.js:137] [bytecode=0xba09e2b3fe9 offset=160](this=0x165eaf702241 <undefined>,err=0x165eaf702241 <undefined>) {
+  // stack-allocated locals
+  var layer = 0x111c6c5f6489 <Layer map = 0xfe787104511>#5#
+  // expression stack (top to bottom)
+  [06] : 0x165eaf702241 <undefined>
+  [05] : 0x21290f0c2a39 <JSFunction next (sfi = 0xba09e2b3be1)>#4#
+  [04] : 0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#
+  [03] : 0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#
+  [02] : 0x111c6c5f6489 <Layer map = 0xfe787104511>#5#
+  [01] : 0x1155323b3059 <JSFunction handle (sfi = 0x1155323b1959)>#26#
+--------- s o u r c e   c o d e ---------
+function next(err) {\x0a    // signal to exit route\x0a    if (err && err === 'route') {\x0a      return done();\x0a    }\x0a\x0a    // signal to exit router\x0a    if (err && err === 'router') {\x0a      return done(err)\x0a    }\x0a\x0a    var layer = stack[idx++];\x0a    if (!layer) {\x0a      return done(err);\x0a    }\x0a\x0a    if (layer.method && layer...
+
+-----------------------------------------
+}
+
+[8]: arguments adaptor frame: 0->1 {
+}
+
+[10]: dispatch [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/router/route.js:112] [bytecode=0xba09e2b3d01 offset=123](this=0x111c6c5f5719 <Route map = 0xfe7871044b9>#6#,req=0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#,res=0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#,done=0x21290f0c0cf1 <JSFunction next (sfi = 0xba09e2ac1c9)>#7#) {
+  // heap-allocated locals
+  var done = 0x21290f0c0cf1 <JSFunction next (sfi = 0xba09e2ac1c9)>#7#
+  var res = 0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#
+  var req = 0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#
+  var idx = 1
+  var stack = 0x111c6c5f59f1 <JSArray[1]>#27#
+  var method = 0x21290f0c2a81 <String[4]: post>
+  var next = 0x21290f0c2a39 <JSFunction next (sfi = 0xba09e2b3be1)>#4#
+  // expression stack (top to bottom)
+  [03] : 0xa6901c9a809 <String[4]: POST>
+  [02] : 0x21290f0c2a39 <JSFunction next (sfi = 0xba09e2b3be1)>#4#
+  [01] : 0x1fffed766ee9 <FixedArray[10]>#28#
+  [00] : 0x1155323cd5f1 <JSFunction dispatch (sfi = 0x1155323af119)>#29#
+--------- s o u r c e   c o d e ---------
+function dispatch(req, res, done) {\x0a  var idx = 0;\x0a  var stack = this.stack;\x0a  if (stack.length === 0) {\x0a    return done();\x0a  }\x0a\x0a  var method = req.method.toLowerCase();\x0a  if (method === 'head' && !this.methods['head']) {\x0a    method = 'get';\x0a  }\x0a\x0a  req.route = this;\x0a\x0a  next();\x0a\x0a  function next(err) {\x0a    // signal t...
+
+-----------------------------------------
+}
+
+[12]: handle_request(aka handle) [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/router/layer.js:95] [bytecode=0xba09e2b0149 offset=42](this=0x111c6c5f5b69 <Layer map = 0xfe787104359>#8#,req=0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#,res=0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#,next=0x21290f0c0cf1 <JSFunction next (sfi = 0xba09e2ac1c9)>#7#) {
+  // stack-allocated locals
+  var fn = 0x111c6c5f5b39 <JSBoundFunction (BoundTargetFunction 0x1155323cd5f1)>#30#
+  // expression stack (top to bottom)
+  [06] : 0x21290f0c0cf1 <JSFunction next (sfi = 0xba09e2ac1c9)>#7#
+  [05] : 0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#
+  [04] : 0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#
+  [03] : 0x165eaf702241 <undefined>
+  [02] : 0x1fffed749639 <FixedArray[9]>#25#
+  [01] : 0x1155323b3059 <JSFunction handle (sfi = 0x1155323b1959)>#26#
+--------- s o u r c e   c o d e ---------
+function handle(req, res, next) {\x0a  var fn = this.handle;\x0a\x0a  if (fn.length > 3) {\x0a    // not a standard request handler\x0a    return next();\x0a  }\x0a\x0a  try {\x0a    fn(req, res, next);\x0a  } catch (err) {\x0a    next(err);\x0a  }\x0a}
+-----------------------------------------
+}
+
+[14]: /* anonymous */(aka /* anonymous */) [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/router/index.js:281] [bytecode=0xba09e2af839 offset=56](this=0x165eaf702241 <undefined>,err=0x165eaf702241 <undefined>) {
+  // expression stack (top to bottom)
+  [04] : 0x21290f0c0cf1 <JSFunction next (sfi = 0xba09e2ac1c9)>#7#
+  [03] : 0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#
+  [02] : 0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#
+  [01] : 0x111c6c5f5b69 <Layer map = 0xfe787104359>#8#
+  [00] : 0x1155323b3059 <JSFunction handle (sfi = 0x1155323b1959)>#26#
+--------- s o u r c e   c o d e ---------
+function (err) {\x0a      if (err) {\x0a        return next(layerError || err);\x0a      }\x0a\x0a      if (route) {\x0a        return layer.handle_request(req, res, next);\x0a      }\x0a\x0a      trim_prefix(layer, layerError, layerPath, path);\x0a    }
+-----------------------------------------
+}
+
+[15]: arguments adaptor frame: 0->1 {
+}
+
+[17]: process_params [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/router/index.js:335] [bytecode=0xba09e2af609 offset=74](this=0x111c6c5f0ee9 <JSFunction router (sfi = 0x1523f726dd61)>#9#,layer=0x111c6c5f5b69 <Layer map = 0xfe787104359>#8#,called=0x21290f0c0e19 <Object map = 0x3db151304829>#10#,req=0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#,res=0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#,done=0x21290f0c2851 <JSFunction (sfi = 0xba09e2ad2e9)>#11#) {
+  // heap-allocated locals
+  var done = 0x21290f0c2851 <JSFunction (sfi = 0xba09e2ad2e9)>#11#
+  var res = 0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#
+  var req = 0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#
+  var called = 0x21290f0c0e19 <Object map = 0x3db151304829>#10#
+  var params = 0x111c6c5f13a9 <Object map = 0x3db151304829>#31#
+  var keys = 0x111c6c5f5ca9 <JSArray[0]>#32#
+  var i = 0x165eaf702241 <undefined>
+  var name = 0x165eaf702241 <undefined>
+  var paramIndex = 0x165eaf702241 <undefined>
+  var key = 0x165eaf702241 <undefined>
+  var paramVal = 0x165eaf702241 <undefined>
+  var paramCallbacks = 0x165eaf702241 <undefined>
+  var paramCalled = 0x165eaf702241 <undefined>
+  var param = 0x21290f0c2941 <JSFunction param (sfi = 0xba09e2af441)>#33#
+  var paramCallback = 0x21290f0c2989 <JSFunction paramCallback (sfi = 0xba09e2af509)>#34#
+  // expression stack (top to bottom)
+  [02] : 0x21290f0c2851 <JSFunction (sfi = 0xba09e2ad2e9)>#11#
+  [01] : 0x1fffed767aa9 <FixedArray[25]>#35#
+  [00] : 0x1155323d11f1 <JSFunction process_params (sfi = 0x1155323add29)>#36#
+--------- s o u r c e   c o d e ---------
+function process_params(layer, called, req, res, done) {\x0a  var params = this.params;\x0a\x0a  // captured parameters from the layer, keys and values\x0a  var keys = layer.keys;\x0a\x0a  // fast track\x0a  if (!keys || keys.length === 0) {\x0a    return done();\x0a  }\x0a\x0a  var i = 0;\x0a  var name;\x0a  var paramIndex = 0;\x0a  var key;\x0a  var paramVal;\x0a  va...
+
+-----------------------------------------
+}
+
+[19]: next(aka next) [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/router/index.js:275] [bytecode=0xba09e2ad451 offset=641](this=0x165eaf702241 <undefined>,err=0x165eaf702241 <undefined>) {
+  // stack-allocated locals
+  var match = 0x165eaf7022c1 <true>
+  var method = 0xa6901c9a809 <String[4]: POST>
+  var has_method = 0x165eaf7022c1 <true>
+  // heap-allocated locals
+  var layerError = 0x165eaf702241 <undefined>
+  var path = 0x21290f0bf7b1 <String[8]: /infLoop>
+  var layer = 0x111c6c5f5b69 <Layer map = 0xfe787104359>#8#
+  var route = 0x111c6c5f5719 <Route map = 0xfe7871044b9>#6#
+  var layerPath = 0x21290f0bf7b1 <String[8]: /infLoop>
+  // expression stack (top to bottom)
+  [10] : 0x21290f0c2851 <JSFunction (sfi = 0xba09e2ad2e9)>#11#
+  [09] : 0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#
+  [08] : 0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#
+  [07] : 0x21290f0c0e19 <Object map = 0x3db151304829>#10#
+  [06] : 0x111c6c5f5b69 <Layer map = 0xfe787104359>#8#
+  [05] : 0x111c6c5f0ee9 <JSFunction router (sfi = 0x1523f726dd61)>#9#
+  [04] : 0x1155323d11f1 <JSFunction process_params (sfi = 0x1155323add29)>#36#
+  [03] : 0x21290f0c0c49 <FixedArray[19]>#37#
+--------- s o u r c e   c o d e ---------
+function next(err) {\x0a    var layerError = err === 'route'\x0a      ? null\x0a      : err;\x0a\x0a    // remove added slash\x0a    if (slashAdded) {\x0a      req.url = req.url.substr(1);\x0a      slashAdded = false;\x0a    }\x0a\x0a    // restore altered req.url\x0a    if (removed.length !== 0) {\x0a      req.baseUrl = parentUrl;\x0a      req.url = pr...
+
+-----------------------------------------
+}
+
+[20]: arguments adaptor frame: 0->1 {
+}
+
+[22]: expressInit(aka expressInit) [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/middleware/init.js:40] [bytecode=0xba09e2b1d59 offset=140](this=0x165eaf702241 <undefined>,req=0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#,res=0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#,next=0x21290f0c0cf1 <JSFunction next (sfi = 0xba09e2ac1c9)>#7#) {
+  // expression stack (top to bottom)
+  [04] : 0x165eaf702211 <null>
+  [03] : 0x165eaf71b919 <JSFunction Object (sfi = 0x165eaf71b869)>#38#
+  [02] : 0x165eaf71d9c9 <JSFunction create (sfi = 0x165eaf71d919)>#39#
+  [01] : 0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#
+  [00] : 0x111c6c5f3821 <JSFunction expressInit (sfi = 0x1523f72709e1)>#40#
+--------- s o u r c e   c o d e ---------
+function expressInit(req, res, next){\x0a    if (app.enabled('x-powered-by')) res.setHeader('X-Powered-By', 'Express');\x0a    req.res = res;\x0a    res.req = req;\x0a    req.next = next;\x0a\x0a    setPrototypeOf(req, app.request)\x0a    setPrototypeOf(res, app.response)\x0a\x0a    res.locals = res.locals || Object.create(null);\x0a\x0a    next();\x0a  ...
+
+-----------------------------------------
+}
+
+[24]: handle_request(aka handle) [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/router/layer.js:95] [bytecode=0xba09e2b0149 offset=42](this=0x111c6c5f3bd9 <Layer map = 0xfe787104359>#12#,req=0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#,res=0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#,next=0x21290f0c0cf1 <JSFunction next (sfi = 0xba09e2ac1c9)>#7#) {
+  // stack-allocated locals
+  var fn = 0x111c6c5f3821 <JSFunction expressInit (sfi = 0x1523f72709e1)>#40#
+  // expression stack (top to bottom)
+  [06] : 0x21290f0c0cf1 <JSFunction next (sfi = 0xba09e2ac1c9)>#7#
+  [05] : 0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#
+  [04] : 0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#
+  [03] : 0x165eaf702241 <undefined>
+  [02] : 0x1fffed749639 <FixedArray[9]>#25#
+  [01] : 0x1155323b3059 <JSFunction handle (sfi = 0x1155323b1959)>#26#
+--------- s o u r c e   c o d e ---------
+function handle(req, res, next) {\x0a  var fn = this.handle;\x0a\x0a  if (fn.length > 3) {\x0a    // not a standard request handler\x0a    return next();\x0a  }\x0a\x0a  try {\x0a    fn(req, res, next);\x0a  } catch (err) {\x0a    next(err);\x0a  }\x0a}
+-----------------------------------------
+}
+
+[26]: trim_prefix(aka trim_prefix) [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/router/index.js:317] [bytecode=0xba09e2afaf1 offset=363](this=0x165eaf702241 <undefined>,layer=0x111c6c5f3bd9 <Layer map = 0xfe787104359>#12#,layerError=0x165eaf702241 <undefined>,layerPath=0x165eaf7027f1 <String[0]: >,path=0x21290f0bf7b1 <String[8]: /infLoop>) {
+  // stack-allocated locals
+  var c = 0x165eaf702241 <undefined>
+  // expression stack (top to bottom)
+  [06] : 0x165eaf702241 <undefined>
+  [05] : 0x21290f0c0cf1 <JSFunction next (sfi = 0xba09e2ac1c9)>#7#
+  [04] : 0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#
+  [03] : 0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#
+  [02] : 0x111c6c5f3bd9 <Layer map = 0xfe787104359>#12#
+  [01] : 0x1155323b3059 <JSFunction handle (sfi = 0x1155323b1959)>#26#
+--------- s o u r c e   c o d e ---------
+function trim_prefix(layer, layerError, layerPath, path) {\x0a    if (layerPath.length !== 0) {\x0a      // Validate path breaks on a path separator\x0a      var c = path[layerPath.length]\x0a      if (c && c !== '/' && c !== '.') return next(layerError)\x0a\x0a      // Trim off the part of the url that matches the route\x0a      // middle...
+
+-----------------------------------------
+}
+
+[28]: /* anonymous */(aka /* anonymous */) [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/router/index.js:284] [bytecode=0xba09e2af839 offset=84](this=0x165eaf702241 <undefined>,err=0x165eaf702241 <undefined>) {
+  // expression stack (top to bottom)
+  [04] : 0x21290f0bf7b1 <String[8]: /infLoop>
+  [03] : 0x165eaf7027f1 <String[0]: >
+  [02] : 0x165eaf702241 <undefined>
+  [01] : 0x111c6c5f3bd9 <Layer map = 0xfe787104359>#12#
+  [00] : 0x21290f0c0d39 <JSFunction trim_prefix (sfi = 0xba09e2ac291)>#41#
+--------- s o u r c e   c o d e ---------
+function (err) {\x0a      if (err) {\x0a        return next(layerError || err);\x0a      }\x0a\x0a      if (route) {\x0a        return layer.handle_request(req, res, next);\x0a      }\x0a\x0a      trim_prefix(layer, layerError, layerPath, path);\x0a    }
+-----------------------------------------
+}
+
+[29]: arguments adaptor frame: 0->1 {
+}
+
+[31]: process_params [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/router/index.js:335] [bytecode=0xba09e2af609 offset=74](this=0x111c6c5f0ee9 <JSFunction router (sfi = 0x1523f726dd61)>#9#,layer=0x111c6c5f3bd9 <Layer map = 0xfe787104359>#12#,called=0x21290f0c0e19 <Object map = 0x3db151304829>#10#,req=0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#,res=0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#,done=0x21290f0c1c49 <JSFunction (sfi = 0xba09e2ad2e9)>#13#) {
+  // heap-allocated locals
+  var done = 0x21290f0c1c49 <JSFunction (sfi = 0xba09e2ad2e9)>#13#
+  var res = 0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#
+  var req = 0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#
+  var called = 0x21290f0c0e19 <Object map = 0x3db151304829>#10#
+  var params = 0x111c6c5f13a9 <Object map = 0x3db151304829>#31#
+  var keys = 0x111c6c5f3de9 <JSArray[0]>#42#
+  var i = 0x165eaf702241 <undefined>
+  var name = 0x165eaf702241 <undefined>
+  var paramIndex = 0x165eaf702241 <undefined>
+  var key = 0x165eaf702241 <undefined>
+  var paramVal = 0x165eaf702241 <undefined>
+  var paramCallbacks = 0x165eaf702241 <undefined>
+  var paramCalled = 0x165eaf702241 <undefined>
+  var param = 0x21290f0c1d39 <JSFunction param (sfi = 0xba09e2af441)>#43#
+  var paramCallback = 0x21290f0c1d81 <JSFunction paramCallback (sfi = 0xba09e2af509)>#44#
+  // expression stack (top to bottom)
+  [02] : 0x21290f0c1c49 <JSFunction (sfi = 0xba09e2ad2e9)>#13#
+  [01] : 0x1fffed767aa9 <FixedArray[25]>#35#
+  [00] : 0x1155323d11f1 <JSFunction process_params (sfi = 0x1155323add29)>#36#
+--------- s o u r c e   c o d e ---------
+function process_params(layer, called, req, res, done) {\x0a  var params = this.params;\x0a\x0a  // captured parameters from the layer, keys and values\x0a  var keys = layer.keys;\x0a\x0a  // fast track\x0a  if (!keys || keys.length === 0) {\x0a    return done();\x0a  }\x0a\x0a  var i = 0;\x0a  var name;\x0a  var paramIndex = 0;\x0a  var key;\x0a  var paramVal;\x0a  va...
+
+-----------------------------------------
+}
+
+[33]: next(aka next) [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/router/index.js:275] [bytecode=0xba09e2ad451 offset=641](this=0x165eaf702241 <undefined>,err=0x165eaf702241 <undefined>) {
+  // stack-allocated locals
+  var match = 0x165eaf7022c1 <true>
+  var method = 0x165eaf702241 <undefined>
+  var has_method = 0x165eaf702241 <undefined>
+  // heap-allocated locals
+  var layerError = 0x165eaf702241 <undefined>
+  var path = 0x21290f0bf7b1 <String[8]: /infLoop>
+  var layer = 0x111c6c5f3bd9 <Layer map = 0xfe787104359>#12#
+  var route = 0x165eaf702241 <undefined>
+  var layerPath = 0x165eaf7027f1 <String[0]: >
+  // expression stack (top to bottom)
+  [10] : 0x21290f0c1c49 <JSFunction (sfi = 0xba09e2ad2e9)>#13#
+  [09] : 0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#
+  [08] : 0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#
+  [07] : 0x21290f0c0e19 <Object map = 0x3db151304829>#10#
+  [06] : 0x111c6c5f3bd9 <Layer map = 0xfe787104359>#12#
+  [05] : 0x111c6c5f0ee9 <JSFunction router (sfi = 0x1523f726dd61)>#9#
+  [04] : 0x1155323d11f1 <JSFunction process_params (sfi = 0x1155323add29)>#36#
+  [03] : 0x21290f0c0c49 <FixedArray[19]>#37#
+--------- s o u r c e   c o d e ---------
+function next(err) {\x0a    var layerError = err === 'route'\x0a      ? null\x0a      : err;\x0a\x0a    // remove added slash\x0a    if (slashAdded) {\x0a      req.url = req.url.substr(1);\x0a      slashAdded = false;\x0a    }\x0a\x0a    // restore altered req.url\x0a    if (removed.length !== 0) {\x0a      req.baseUrl = parentUrl;\x0a      req.url = pr...
+
+-----------------------------------------
+}
+
+[34]: arguments adaptor frame: 0->1 {
+}
+
+[36]: query(aka query) [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/middleware/query.js:45] [bytecode=0xba09e2b0331 offset=47](this=0x165eaf702241 <undefined>,req=0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#,res=0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#,next=0x21290f0c0cf1 <JSFunction next (sfi = 0xba09e2ac1c9)>#7#) {
+  // stack-allocated locals
+  var val = 0x165eaf702211 <null>
+  // expression stack (top to bottom)
+  [05] : 0x165eaf702241 <undefined>
+  [04] : 0x165eaf702241 <undefined>
+  [03] : 0xa6901c89501 <JSFunction parseExtendedQueryString (sfi = 0x1155323dccc9)>#45#
+  [02] : 0x21290f0c1411 <Url map = 0xfe78710c809>#46#
+  [01] : 0x111c6c5f26b9 <JSFunction query (sfi = 0x1523f726e3a9)>#47#
+--------- s o u r c e   c o d e ---------
+function query(req, res, next){\x0a    if (!req.query) {\x0a      var val = parseUrl(req).query;\x0a      req.query = queryparse(val, opts);\x0a    }\x0a\x0a    next();\x0a  }
+-----------------------------------------
+}
+
+[38]: handle_request(aka handle) [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/router/layer.js:95] [bytecode=0xba09e2b0149 offset=42](this=0x111c6c5f2a01 <Layer map = 0xfe787104359>#14#,req=0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#,res=0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#,next=0x21290f0c0cf1 <JSFunction next (sfi = 0xba09e2ac1c9)>#7#) {
+  // stack-allocated locals
+  var fn = 0x111c6c5f26b9 <JSFunction query (sfi = 0x1523f726e3a9)>#47#
+  // expression stack (top to bottom)
+  [06] : 0x21290f0c0cf1 <JSFunction next (sfi = 0xba09e2ac1c9)>#7#
+  [05] : 0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#
+  [04] : 0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#
+  [03] : 0x165eaf702241 <undefined>
+  [02] : 0x1fffed749639 <FixedArray[9]>#25#
+  [01] : 0x1155323b3059 <JSFunction handle (sfi = 0x1155323b1959)>#26#
+--------- s o u r c e   c o d e ---------
+function handle(req, res, next) {\x0a  var fn = this.handle;\x0a\x0a  if (fn.length > 3) {\x0a    // not a standard request handler\x0a    return next();\x0a  }\x0a\x0a  try {\x0a    fn(req, res, next);\x0a  } catch (err) {\x0a    next(err);\x0a  }\x0a}
+-----------------------------------------
+}
+
+[40]: trim_prefix(aka trim_prefix) [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/router/index.js:317] [bytecode=0xba09e2afaf1 offset=363](this=0x165eaf702241 <undefined>,layer=0x111c6c5f2a01 <Layer map = 0xfe787104359>#14#,layerError=0x165eaf702241 <undefined>,layerPath=0x165eaf7027f1 <String[0]: >,path=0x21290f0bf7b1 <String[8]: /infLoop>) {
+  // stack-allocated locals
+  var c = 0x165eaf702241 <undefined>
+  // expression stack (top to bottom)
+  [06] : 0x165eaf702241 <undefined>
+  [05] : 0x21290f0c0cf1 <JSFunction next (sfi = 0xba09e2ac1c9)>#7#
+  [04] : 0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#
+  [03] : 0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#
+  [02] : 0x111c6c5f2a01 <Layer map = 0xfe787104359>#14#
+  [01] : 0x1155323b3059 <JSFunction handle (sfi = 0x1155323b1959)>#26#
+--------- s o u r c e   c o d e ---------
+function trim_prefix(layer, layerError, layerPath, path) {\x0a    if (layerPath.length !== 0) {\x0a      // Validate path breaks on a path separator\x0a      var c = path[layerPath.length]\x0a      if (c && c !== '/' && c !== '.') return next(layerError)\x0a\x0a      // Trim off the part of the url that matches the route\x0a      // middle...
+
+-----------------------------------------
+}
+
+[42]: /* anonymous */(aka /* anonymous */) [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/router/index.js:284] [bytecode=0xba09e2af839 offset=84](this=0x165eaf702241 <undefined>,err=0x165eaf702241 <undefined>) {
+  // expression stack (top to bottom)
+  [04] : 0x21290f0bf7b1 <String[8]: /infLoop>
+  [03] : 0x165eaf7027f1 <String[0]: >
+  [02] : 0x165eaf702241 <undefined>
+  [01] : 0x111c6c5f2a01 <Layer map = 0xfe787104359>#14#
+  [00] : 0x21290f0c0d39 <JSFunction trim_prefix (sfi = 0xba09e2ac291)>#41#
+--------- s o u r c e   c o d e ---------
+function (err) {\x0a      if (err) {\x0a        return next(layerError || err);\x0a      }\x0a\x0a      if (route) {\x0a        return layer.handle_request(req, res, next);\x0a      }\x0a\x0a      trim_prefix(layer, layerError, layerPath, path);\x0a    }
+-----------------------------------------
+}
+
+[43]: arguments adaptor frame: 0->1 {
+}
+
+[45]: process_params [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/router/index.js:335] [bytecode=0xba09e2af609 offset=74](this=0x111c6c5f0ee9 <JSFunction router (sfi = 0x1523f726dd61)>#9#,layer=0x111c6c5f2a01 <Layer map = 0xfe787104359>#14#,called=0x21290f0c0e19 <Object map = 0x3db151304829>#10#,req=0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#,res=0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#,done=0x21290f0c1579 <JSFunction (sfi = 0xba09e2ad2e9)>#15#) {
+  // heap-allocated locals
+  var done = 0x21290f0c1579 <JSFunction (sfi = 0xba09e2ad2e9)>#15#
+  var res = 0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#
+  var req = 0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#
+  var called = 0x21290f0c0e19 <Object map = 0x3db151304829>#10#
+  var params = 0x111c6c5f13a9 <Object map = 0x3db151304829>#31#
+  var keys = 0x111c6c5f2c89 <JSArray[0]>#48#
+  var i = 0x165eaf702241 <undefined>
+  var name = 0x165eaf702241 <undefined>
+  var paramIndex = 0x165eaf702241 <undefined>
+  var key = 0x165eaf702241 <undefined>
+  var paramVal = 0x165eaf702241 <undefined>
+  var paramCallbacks = 0x165eaf702241 <undefined>
+  var paramCalled = 0x165eaf702241 <undefined>
+  var param = 0x21290f0c1669 <JSFunction param (sfi = 0xba09e2af441)>#49#
+  var paramCallback = 0x21290f0c16b1 <JSFunction paramCallback (sfi = 0xba09e2af509)>#50#
+  // expression stack (top to bottom)
+  [02] : 0x21290f0c1579 <JSFunction (sfi = 0xba09e2ad2e9)>#15#
+  [01] : 0x1fffed767aa9 <FixedArray[25]>#35#
+  [00] : 0x1155323d11f1 <JSFunction process_params (sfi = 0x1155323add29)>#36#
+--------- s o u r c e   c o d e ---------
+function process_params(layer, called, req, res, done) {\x0a  var params = this.params;\x0a\x0a  // captured parameters from the layer, keys and values\x0a  var keys = layer.keys;\x0a\x0a  // fast track\x0a  if (!keys || keys.length === 0) {\x0a    return done();\x0a  }\x0a\x0a  var i = 0;\x0a  var name;\x0a  var paramIndex = 0;\x0a  var key;\x0a  var paramVal;\x0a  va...
+
+-----------------------------------------
+}
+
+[47]: next(aka next) [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/router/index.js:275] [bytecode=0xba09e2ad451 offset=641](this=0x165eaf702241 <undefined>,err=0x165eaf702241 <undefined>) {
+  // stack-allocated locals
+  var match = 0x165eaf7022c1 <true>
+  var method = 0x165eaf702241 <undefined>
+  var has_method = 0x165eaf702241 <undefined>
+  // heap-allocated locals
+  var layerError = 0x165eaf702241 <undefined>
+  var path = 0x21290f0bf7b1 <String[8]: /infLoop>
+  var layer = 0x111c6c5f2a01 <Layer map = 0xfe787104359>#14#
+  var route = 0x165eaf702241 <undefined>
+  var layerPath = 0x165eaf7027f1 <String[0]: >
+  // expression stack (top to bottom)
+  [10] : 0x21290f0c1579 <JSFunction (sfi = 0xba09e2ad2e9)>#15#
+  [09] : 0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#
+  [08] : 0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#
+  [07] : 0x21290f0c0e19 <Object map = 0x3db151304829>#10#
+  [06] : 0x111c6c5f2a01 <Layer map = 0xfe787104359>#14#
+  [05] : 0x111c6c5f0ee9 <JSFunction router (sfi = 0x1523f726dd61)>#9#
+  [04] : 0x1155323d11f1 <JSFunction process_params (sfi = 0x1155323add29)>#36#
+  [03] : 0x21290f0c0c49 <FixedArray[19]>#37#
+--------- s o u r c e   c o d e ---------
+function next(err) {\x0a    var layerError = err === 'route'\x0a      ? null\x0a      : err;\x0a\x0a    // remove added slash\x0a    if (slashAdded) {\x0a      req.url = req.url.substr(1);\x0a      slashAdded = false;\x0a    }\x0a\x0a    // restore altered req.url\x0a    if (removed.length !== 0) {\x0a      req.baseUrl = parentUrl;\x0a      req.url = pr...
+
+-----------------------------------------
+}
+
+[48]: arguments adaptor frame: 0->1 {
+}
+
+[50]: handle [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/router/index.js:174] [bytecode=0xba09e2ac4c1 offset=274](this=0x111c6c5f0ee9 <JSFunction router (sfi = 0x1523f726dd61)>#9#,req=0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#,res=0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#,out=0x21290f0c0c01 <JSFunction (sfi = 0xba09e2abdd9)>#16#) {
+  // heap-allocated locals
+  var res = 0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#
+  var req = 0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#
+  var self = 0x111c6c5f0ee9 <JSFunction router (sfi = 0x1523f726dd61)>#9#
+  var idx = 4
+  var protohost = 0x165eaf7027f1 <String[0]: >
+  var removed = 0x165eaf7027f1 <String[0]: >
+  var slashAdded = 0x165eaf7022f1 <false>
+  var paramcalled = 0x21290f0c0e19 <Object map = 0x3db151304829>#10#
+  var options = 0x21290f0c0e61 <JSArray[0]>#51#
+  var stack = 0x111c6c5f2431 <JSArray[4]>#52#
+  var parentParams = 0x165eaf702241 <undefined>
+  var parentUrl = 0x165eaf7027f1 <String[0]: >
+  var done = 0x21290f0c0fc9 <JSFunction (sfi = 0xba09e2acd91)>#53#
+  var next = 0x21290f0c0cf1 <JSFunction next (sfi = 0xba09e2ac1c9)>#7#
+  var trim_prefix = 0x21290f0c0d39 <JSFunction trim_prefix (sfi = 0xba09e2ac291)>#41#
+  // expression stack (top to bottom)
+  [07] : 0x2772739199b1 <String[6]: params>
+  [06] : 0x165eaf7036c1 <String[4]: next>
+  [05] : 0x1155323acab1 <String[7]: baseUrl>
+  [04] : 0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#
+  [03] : 0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#
+  [02] : 0x21290f0c0cf1 <JSFunction next (sfi = 0xba09e2ac1c9)>#7#
+  [01] : 0x1fffed767aa9 <FixedArray[25]>#35#
+  [00] : 0x1155323d1191 <JSFunction handle (sfi = 0x1155323adc61)>#54#
+--------- s o u r c e   c o d e ---------
+function handle(req, res, out) {\x0a  var self = this;\x0a\x0a  debug('dispatching %s %s', req.method, req.url);\x0a\x0a  var idx = 0;\x0a  var protohost = getProtohost(req.url) || ''\x0a  var removed = '';\x0a  var slashAdded = false;\x0a  var paramcalled = {};\x0a\x0a  // store options for OPTIONS request\x0a  // only used if OPTIONS request\x0a  var...
+
+-----------------------------------------
+}
+
+[52]: handle [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/application.js:174] [bytecode=0xba09e2ab999 offset=116](this=0x111c6c5e76c9 <JSFunction app (sfi = 0x1523f7266d41)>#17#,req=0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#,res=0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#,callback=0x165eaf702241 <undefined>) {
+  // stack-allocated locals
+  var router = 0x111c6c5f0ee9 <JSFunction router (sfi = 0x1523f726dd61)>#9#
+  var done = 0x21290f0c0c01 <JSFunction (sfi = 0xba09e2abdd9)>#16#
+  // expression stack (top to bottom)
+  [09] : 0x165eaf772421 <String[3]: env>
+  [08] : 0xa6901c82e51 <JSFunction logerror (sfi = 0x36eb2468b29)>#55#
+  [07] : 0x21290f0c0c01 <JSFunction (sfi = 0xba09e2abdd9)>#16#
+  [06] : 0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#
+  [05] : 0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#
+  [04] : 0x111c6c5f0ee9 <JSFunction router (sfi = 0x1523f726dd61)>#9#
+  [03] : 0x1155323d1191 <JSFunction handle (sfi = 0x1155323adc61)>#54#
+  [02] : 0xa6901ca3f29 <JSFunction handle (sfi = 0x36eb2468f11)>#56#
+--------- s o u r c e   c o d e ---------
+function handle(req, res, callback) {\x0a  var router = this._router;\x0a\x0a  // final handler\x0a  var done = callback || finalhandler(req, res, {\x0a    env: this.get('env'),\x0a    onerror: logerror.bind(this)\x0a  });\x0a\x0a  // no routes\x0a  if (!router) {\x0a    debug('no routes defined on app');\x0a    done();\x0a    return;\x0a  }\x0a\x0a  router.han...
+
+-----------------------------------------
+}
+
+[54]: app [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/express.js:39] [bytecode=0xba09e2ab7a1 offset=20](this=0x111c6c5ef611 <Server map = 0xfe787105171>#18#,req=0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#,res=0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#,next=0x165eaf702241 <undefined>) {
+  // expression stack (top to bottom)
+  [04] : 0x165eaf702241 <undefined>
+  [03] : 0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#
+  [02] : 0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#
+  [01] : 0x111c6c5e76c9 <JSFunction app (sfi = 0x1523f7266d41)>#17#
+  [00] : 0xa6901ca3f29 <JSFunction handle (sfi = 0x36eb2468f11)>#56#
+--------- s o u r c e   c o d e ---------
+function app(req, res, next) {\x0a    app.handle(req, res, next);\x0a  }
+-----------------------------------------
+}
+
+[55]: arguments adaptor frame: 2->3 {
+  // actual arguments
+  [00] : 0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#
+  [01] : 0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#
+}
+
+[57]: emitTwo(aka emitTwo) [events.js:125] [bytecode=0x27727393a951 offset=24](this=0x165eaf702241 <undefined>,handler=0x111c6c5e76c9 <JSFunction app (sfi = 0x1523f7266d41)>#17#,isFn=0x165eaf7022c1 <true>,self=0x111c6c5ef611 <Server map = 0xfe787105171>#18#,arg1=0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#,arg2=0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#) {
+  // stack-allocated locals
+  var len = 0x165eaf702241 <undefined>
+  var listeners = 0x165eaf702241 <undefined>
+  var i = 0x165eaf702241 <undefined>
+  // expression stack (top to bottom)
+  [07] : 0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#
+  [06] : 0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#
+  [05] : 0x111c6c5ef611 <Server map = 0xfe787105171>#18#
+  [04] : 0x111c6c5e76c9 <JSFunction app (sfi = 0x1523f7266d41)>#17#
+  [03] : 0x165eaf71f409 <JSFunction call (sfi = 0x165eaf71f359)>#57#
+--------- s o u r c e   c o d e ---------
+function emitTwo(handler, isFn, self, arg1, arg2) {\x0a  if (isFn)\x0a    handler.call(self, arg1, arg2);\x0a  else {\x0a    var len = handler.length;\x0a    var listeners = arrayClone(handler, len);\x0a    for (var i = 0; i < len; ++i)\x0a      listeners[i].call(self, arg1, arg2);\x0a  }\x0a}
+-----------------------------------------
+}
+
+[59]: emit [events.js:213] [bytecode=0x27727393a1f1 offset=362](this=0x111c6c5ef611 <Server map = 0xfe787105171>#18#,type=0x56d2a3d7299 <String[7]: request>) {
+  // stack-allocated locals
+  var er = 0x165eaf702241 <undefined>
+  var handler = 0x165eaf702241 <undefined>
+  var len = 0x111c6c5e76c9 <JSFunction app (sfi = 0x1523f7266d41)>#17#
+  var args = 3
+  var i = 0x165eaf702241 <undefined>
+  var events = 0x165eaf702241 <undefined>
+  var domain = 0x111c6c5efc71 <Object map = 0x3db151304881>#58#
+  var needDomainExit = 0x165eaf702211 <null>
+  var doError = 0x165eaf7022f1 <false>
+  var isFn = 0x165eaf7022f1 <false>
+  var .switch_tag = 0x165eaf7022c1 <true>
+  var arguments = 3
+  // expression stack (top to bottom)
+  [21] : 0x165eaf702241 <undefined>
+  [20] : 0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#
+  [19] : 0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#
+  [18] : 0x111c6c5ef611 <Server map = 0xfe787105171>#18#
+  [17] : 0x165eaf7022c1 <true>
+  [16] : 0x111c6c5e76c9 <JSFunction app (sfi = 0x1523f7266d41)>#17#
+  [15] : 0x277273906ed9 <JSFunction emitTwo (sfi = 0x56d2a3848e9)>#59#
+  [14] : 3
+  [13] : 0x56d2a386c29 <JSFunction emit (sfi = 0x56d2a3854a1)>#60#
+  [12] : 0x21290f0c0a91 <Arguments map = 0x3db151313b31>#61#
+--------- s o u r c e   c o d e ---------
+function emit(type) {\x0a  var er, handler, len, args, i, events, domain;\x0a  var needDomainExit = false;\x0a  var doError = (type === 'error');\x0a\x0a  events = this._events;\x0a  if (events)\x0a    doError = (doError && events.error == null);\x0a  else if (!doError)\x0a    return false;\x0a\x0a  domain = this.domain;\x0a\x0a  // If there is no 'e...
+
+-----------------------------------------
+}
+
+[60]: arguments adaptor frame: 3->1 {
+  // actual arguments
+  [00] : 0x56d2a3d7299 <String[7]: request>
+  [01] : 0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#  // not passed to callee
+  [02] : 0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#  // not passed to callee
+}
+
+[62]: parserOnIncoming(aka parserOnIncoming) [_http_server.js:602] [bytecode=0xba09e2a8e09 offset=502](this=0x165eaf702241 <undefined>,server=0x111c6c5ef611 <Server map = 0xfe787105171>#18#,socket=0x21290f0bd541 <Socket map = 0xfe787110749>#19#,state=0x21290f0be649 <Object map = 0xfe7871099f9>#20#,req=0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#,keepAlive=0x165eaf7022c1 <true>) {
+  // stack-allocated locals
+  var ws = 0x21290f0bd7d9 <WritableState map = 0x3db151356059>#62#
+  var res = 0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#
+  // expression stack (top to bottom)
+  [12] : 0x111c6c5ef611 <Server map = 0xfe787105171>#18#
+  [11] : 0x21290f0be649 <Object map = 0xfe7871099f9>#20#
+  [10] : 0x21290f0bd541 <Socket map = 0xfe787110749>#19#
+  [09] : 0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#
+  [08] : 0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#
+  [07] : 0x165eaf702241 <undefined>
+  [06] : 0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#
+  [05] : 0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#
+  [04] : 0x56d2a3d7299 <String[7]: request>
+  [03] : 0x111c6c5ef611 <Server map = 0xfe787105171>#18#
+  [02] : 0x56d2a386c29 <JSFunction emit (sfi = 0x56d2a3854a1)>#60#
+--------- s o u r c e   c o d e ---------
+function parserOnIncoming(server, socket, state, req, keepAlive) {\x0a  resetSocketTimeout(server, socket, state);\x0a\x0a  state.incoming.push(req);\x0a\x0a  // If the writable end isn't consuming, then stop reading\x0a  // so that we don't become overwhelmed by a flood of\x0a  // pipelined requests that may never be resolved.\x0a  if (!socket._p...
+
+-----------------------------------------
+}
+
+[64]: parserOnHeadersComplete [_http_common.js:116] [bytecode=0xba09e2a5869 offset=324](this=0x21290f0a22a1 <HTTPParser map = 0xfe787109a51>#21#,versionMajor=1,versionMinor=1,headers=0x21290f0bef49 <JSArray[22]>#22#,method=3,url=0x21290f0bf7b1 <String[8]: /infLoop>,statusCode=0x165eaf702241 <undefined>,statusMessage=0x165eaf702241 <undefined>,upgrade=0x165eaf7022f1 <false>,shouldKeepAlive=0x165eaf7022c1 <true>) {
+  // stack-allocated locals
+  var parser = 0x21290f0a22a1 <HTTPParser map = 0xfe787109a51>#21#
+  var n = 22
+  var skipBody = 0
+  // expression stack (top to bottom)
+  [06] : 2000
+  [05] : 0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#
+  [04] : 0xa6901c87419 <JSArray[33]>#63#
+  [03] : 0x21290f0becb1 <JSBoundFunction (BoundTargetFunction 0xa6901c85f71)>#64#
+--------- s o u r c e   c o d e ---------
+function parserOnHeadersComplete(versionMajor, versionMinor, headers, method,\x0a                                 url, statusCode, statusMessage, upgrade,\x0a                                 shouldKeepAlive) {\x0a  var parser = this;\x0a\x0a  if (!headers) {\x0a    headers = parser._headers;\x0a    parser._headers = [];\x0a  }\x0a\x0a  if (!url) {\x0a    url = pa...
+
+-----------------------------------------
+}
+
+==== Key         ============================================
+
+ #0# 0x165eaf71cef1: 0x165eaf71cef1 <JSObject>
+ #1# 0x14c6c43090d9: 0x14c6c43090d9 <JSGlobal Object>
+ #2# 0x21290f0bf7d1: 0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>
+    _readableState: 0x21290f0bf8c1 <ReadableState map = 0x3db1513553a1>#65#
+          readable: 0x165eaf7022c1 <true>
+            domain: 0x165eaf702211 <null>
+           _events: 0x21290f0bfa91 <Object map = 0x3db151304881>#66#
+      _eventsCount: 0
+     _maxListeners: 0x165eaf702241 <undefined>
+            socket: 0x21290f0bd541 <Socket map = 0xfe787110749>#19#
+        connection: 0x21290f0bd541 <Socket map = 0xfe787110749>#19#
+  httpVersionMajor: 1
+  httpVersionMinor: 1
+       httpVersion: 0x21290f0bfbb9 <String[3]: 1.1>
+          complete: 0x165eaf7022f1 <false>
+           headers: 0x21290f0bfaa9 <Object map = 0xfe7871106f1>#67#
+        rawHeaders: 0x21290f0bef49 <JSArray[22]>#22#
+          trailers: 0x21290f0bfb21 <Object map = 0x3db151304829>#68#
+       rawTrailers: 0x21290f0bfb69 <JSArray[0]>#69#
+           upgrade: 0x165eaf7022f1 <false>
+               url: 0x21290f0bf7b1 <String[8]: /infLoop>
+            method: 0xa6901c9a809 <String[4]: POST>
+        statusCode: 0x165eaf702211 <null>
+     statusMessage: 0x165eaf702211 <null>
+            client: 0x21290f0bd541 <Socket map = 0xfe787110749>#19#
+        _consuming: 0x165eaf7022f1 <false>
+           _dumped: 0x165eaf7022f1 <false>
+              next: 0x21290f0c0cf1 <JSFunction next (sfi = 0xba09e2ac1c9)>#7#
+           baseUrl: 0x165eaf7027f1 <String[0]: >
+       originalUrl: 0x21290f0bf7b1 <String[8]: /infLoop>
+        _parsedUrl: 0x21290f0c1411 <Url map = 0xfe78710c809>#46#
+            params: 0x21290f0c2449 <Object map = 0x3db151304829>#70#
+             query: 0x21290f0c1a31 <Object map = 0x3db151304829>#71#
+               res: 0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#
+             route: 0x111c6c5f5719 <Route map = 0xfe7871044b9>#6#
+ #3# 0x21290f0c04d9: 0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>
+            domain: 0x165eaf702211 <null>
+           _events: 0x21290f0c05f9 <Object map = 0x3db151304881>#72#
+      _eventsCount: 1
+     _maxListeners: 0x165eaf702241 <undefined>
+            output: 0x21290f0c0611 <JSArray[0]>#73#
+   outputEncodings: 0x21290f0c0641 <JSArray[0]>#74#
+   outputCallbacks: 0x21290f0c0671 <JSArray[0]>#75#
+        outputSize: 0
+          writable: 0x165eaf7022c1 <true>
+             _last: 0x165eaf7022f1 <false>
+         upgrading: 0x165eaf7022f1 <false>
+   chunkedEncoding: 0x165eaf7022f1 <false>
+   shouldKeepAlive: 0x165eaf7022c1 <true>
+useChunkedEncodingByDefault: 0x165eaf7022c1 <true>
+          sendDate: 0x165eaf7022c1 <true>
+_removedConnection: 0x165eaf7022f1 <false>
+   _removedContLen: 0x165eaf7022f1 <false>
+        _removedTE: 0x165eaf7022f1 <false>
+    _contentLength: 0x165eaf702211 <null>
+          _hasBody: 0x165eaf7022c1 <true>
+          _trailer: 0x165eaf7027f1 <String[0]: >
+          finished: 0x165eaf7022f1 <false>
+       _headerSent: 0x165eaf7022f1 <false>
+            socket: 0x21290f0bd541 <Socket map = 0xfe787110749>#19#
+        connection: 0x21290f0bd541 <Socket map = 0xfe787110749>#19#
+           _header: 0x165eaf702211 <null>
+    _onPendingData: 0x21290f0c0939 <JSBoundFunction (BoundTargetFunction 0xa6901c85c59)>#76#
+          _sent100: 0x165eaf7022f1 <false>
+  _expect_continue: 0x165eaf7022f1 <false>
+               req: 0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#
+            locals: 0x21290f0c2391 <Object map = 0x3db151304881>#77#
+ #4# 0x21290f0c2a39: 0x21290f0c2a39 <JSFunction next (sfi = 0xba09e2b3be1)>
+ #5# 0x111c6c5f6489: 0x111c6c5f6489 <Layer map = 0xfe787104511>
+            handle: 0x111c6c5f5691 <JSFunction (sfi = 0x2772739481e9)>#24#
+              name: 0x36eb2464271 <String[11]: <anonymous>>
+            params: 0x165eaf702241 <undefined>
+              path: 0x165eaf702241 <undefined>
+              keys: 0x111c6c5f65a1 <JSArray[0]>#78#
+            regexp: 0x111c6c5f69e9 <JSRegExp <String[5]: ^\/?$>>#79#
+            method: 0x277273947ce9 <String[4]: post>
+ #6# 0x111c6c5f5719: 0x111c6c5f5719 <Route map = 0xfe7871044b9>
+              path: 0x277273947d09 <String[8]: /infLoop>
+             stack: 0x111c6c5f59f1 <JSArray[1]>#27#
+           methods: 0x111c6c5f5ab1 <Object map = 0xfe787104619>#80#
+ #7# 0x21290f0c0cf1: 0x21290f0c0cf1 <JSFunction next (sfi = 0xba09e2ac1c9)>
+ #8# 0x111c6c5f5b69: 0x111c6c5f5b69 <Layer map = 0xfe787104359>
+            handle: 0x111c6c5f5b39 <JSBoundFunction (BoundTargetFunction 0x1155323cd5f1)>#30#
+              name: 0x111c6c5f5c81 <String[14]: bound dispatch>
+            params: 0x21290f0c2449 <Object map = 0x3db151304829>#70#
+              path: 0x21290f0bf7b1 <String[8]: /infLoop>
+              keys: 0x111c6c5f5ca9 <JSArray[0]>#32#
+            regexp: 0x111c6c5f6131 <JSRegExp <String[14]: ^\/infLoop\/?$>>#81#
+             route: 0x111c6c5f5719 <Route map = 0xfe7871044b9>#6#
+ #9# 0x111c6c5f0ee9: 0x111c6c5f0ee9 <JSFunction router (sfi = 0x1523f726dd61)>
+            params: 0x111c6c5f13a9 <Object map = 0x3db151304829>#31#
+           _params: 0x111c6c5f20d1 <JSArray[0]>#82#
+     caseSensitive: 0x165eaf7022f1 <false>
+       mergeParams: 0x165eaf702241 <undefined>
+            strict: 0x165eaf7022f1 <false>
+             stack: 0x111c6c5f2431 <JSArray[4]>#52#
+ #10# 0x21290f0c0e19: 0x21290f0c0e19 <Object map = 0x3db151304829>
+ #11# 0x21290f0c2851: 0x21290f0c2851 <JSFunction (sfi = 0xba09e2ad2e9)>
+ #12# 0x111c6c5f3bd9: 0x111c6c5f3bd9 <Layer map = 0xfe787104359>
+            handle: 0x111c6c5f3821 <JSFunction expressInit (sfi = 0x1523f72709e1)>#40#
+              name: 0x1155323d2d29 <String[11]: expressInit>
+            params: 0x21290f0c1bb1 <Object map = 0x3db151304829>#83#
+              path: 0x165eaf7027f1 <String[0]: >
+              keys: 0x111c6c5f3de9 <JSArray[0]>#42#
+            regexp: 0x111c6c5f4239 <JSRegExp <String[12]: ^\/?(?=\/|$)>>#84#
+             route: 0x165eaf702241 <undefined>
+ #13# 0x21290f0c1c49: 0x21290f0c1c49 <JSFunction (sfi = 0xba09e2ad2e9)>
+ #14# 0x111c6c5f2a01: 0x111c6c5f2a01 <Layer map = 0xfe787104359>
+            handle: 0x111c6c5f26b9 <JSFunction query (sfi = 0x1523f726e3a9)>#47#
+              name: 0x277273919049 <String[5]: query>
+            params: 0x21290f0c14f1 <Object map = 0x3db151304829>#85#
+              path: 0x165eaf7027f1 <String[0]: >
+              keys: 0x111c6c5f2c89 <JSArray[0]>#48#
+            regexp: 0x111c6c5f3431 <JSRegExp <String[12]: ^\/?(?=\/|$)>>#86#
+             route: 0x165eaf702241 <undefined>
+ #15# 0x21290f0c1579: 0x21290f0c1579 <JSFunction (sfi = 0xba09e2ad2e9)>
+ #16# 0x21290f0c0c01: 0x21290f0c0c01 <JSFunction (sfi = 0xba09e2abdd9)>
+ #17# 0x111c6c5e76c9: 0x111c6c5e76c9 <JSFunction app (sfi = 0x1523f7266d41)>
+            domain: 0x165eaf702241 <undefined>
+           _events: 0x111c6c5ee0f9 <Object map = 0x3db151304881>#87#
+     _maxListeners: 0x165eaf702241 <undefined>
+           request: 0x111c6c5ec411 <Object map = 0xfe78710cee9>#88#
+          response: 0x111c6c5eccd9 <Object map = 0xfe78710d939>#89#
+             cache: 0x111c6c5eceb1 <Object map = 0x3db151304829>#90#
+           engines: 0x111c6c5ecef9 <Object map = 0x3db151304829>#91#
+          settings: 0x111c6c5ecf99 <Object map = 0xfe787102db1>#92#
+      _eventsCount: 1
+            locals: 0x111c6c5ee249 <Object map = 0x3db151304881>#93#
+         mountpath: 0x165eaf763bf9 <String[1]: />
+ #18# 0x111c6c5ef611: 0x111c6c5ef611 <Server map = 0xfe787105171>
+            domain: 0x165eaf702211 <null>
+           _events: 0x111c6c5efc71 <Object map = 0x3db151304881>#58#
+      _eventsCount: 2
+     _maxListeners: 0x165eaf702241 <undefined>
+      _connections: 1
+           _handle: 0x111c6c5ffc79 <TCP map = 0xfe7871050c1>#94#
+      _usingSlaves: 0x165eaf7022f1 <false>
+           _slaves: 0x111c6c5f0671 <JSArray[0]>#95#
+            _unref: 0x165eaf7022f1 <false>
+     allowHalfOpen: 0x165eaf7022c1 <true>
+    pauseOnConnect: 0x165eaf7022f1 <false>
+ httpAllowHalfOpen: 0x165eaf7022f1 <false>
+           timeout: 120000
+  keepAliveTimeout: 5000
+_pendingResponseData: 0
+   maxHeadersCount: 0x165eaf702211 <null>
+    _connectionKey: 0x111c6c5fff99 <String[9]: 6::::5001>
+ #19# 0x21290f0bd541: 0x21290f0bd541 <Socket map = 0xfe787110749>
+        connecting: 0x165eaf7022f1 <false>
+         _hadError: 0x165eaf7022f1 <false>
+           _handle: 0x21290f0bd469 <TCP map = 0xfe787109b01>#96#
+           _parent: 0x165eaf702211 <null>
+             _host: 0x165eaf702211 <null>
+    _readableState: 0x21290f0bd639 <ReadableState map = 0x3db1513553a1>#97#
+          readable: 0x165eaf7022c1 <true>
+            domain: 0x165eaf702211 <null>
+           _events: 0x21290f0bd7c1 <Object map = 0x3db151304881>#98#
+      _eventsCount: 10
+     _maxListeners: 0x165eaf702241 <undefined>
+    _writableState: 0x21290f0bd7d9 <WritableState map = 0x3db151356059>#62#
+          writable: 0x165eaf7022c1 <true>
+     allowHalfOpen: 0x165eaf7022c1 <true>
+  _bytesDispatched: 0
+         _sockname: 0x165eaf702211 <null>
+      _pendingData: 0x165eaf702211 <null>
+  _pendingEncoding: 0x165eaf7027f1 <String[0]: >
+            server: 0x111c6c5ef611 <Server map = 0xfe787105171>#18#
+           _server: 0x111c6c5ef611 <Server map = 0xfe787105171>#18#
+      _idleTimeout: 120000
+         _idleNext: 0x21290f0a1941 <TimersList map = 0xfe787108d41>#99#
+         _idlePrev: 0x21290f0a1941 <TimersList map = 0xfe787108d41>#99#
+        _idleStart: 26816
+        _destroyed: 0x165eaf7022f1 <false>
+            parser: 0x21290f0a22a1 <HTTPParser map = 0xfe787109a51>#21#
+           _paused: 0x165eaf7022f1 <false>
+        _consuming: 0x165eaf7022c1 <true>
+      _httpMessage: 0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#
+ #20# 0x21290f0be649: 0x21290f0be649 <Object map = 0xfe7871099f9>
+            onData: 0x21290f0be741 <JSBoundFunction (BoundTargetFunction 0xa6901c85e09)>#100#
+             onEnd: 0x21290f0be7a1 <JSBoundFunction (BoundTargetFunction 0xa6901c85dc1)>#101#
+           onClose: 0x21290f0be7f1 <JSBoundFunction (BoundTargetFunction 0xa6901c85d31)>#102#
+           onDrain: 0x21290f0be841 <JSBoundFunction (BoundTargetFunction 0xa6901c85ca1)>#103#
+          outgoing: 0x21290f0be6b1 <JSArray[0]>#104#
+          incoming: 0x21290f0be6e1 <JSArray[1]>#105#
+      outgoingData: 0
+keepAliveTimeoutSet: 0x165eaf7022f1 <false>
+ #21# 0x21290f0a22a1: 0x21290f0a22a1 <HTTPParser map = 0xfe787109a51>
+          _headers: 0x21290f0bd3a1 <JSArray[0]>#106#
+              _url: 0x165eaf7027f1 <String[0]: >
+         _consumed: 0x165eaf7022c1 <true>
+            socket: 0x21290f0bd541 <Socket map = 0xfe787110749>#19#
+          incoming: 0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#
+          outgoing: 0x165eaf702211 <null>
+    maxHeaderPairs: 2000
+        onIncoming: 0x21290f0becb1 <JSBoundFunction (BoundTargetFunction 0xa6901c85f71)>#64#
+ #22# 0x21290f0bef49: 0x21290f0bef49 <JSArray[22]>
+                 0: 0x21290f0bef69 <String[4]: Host>
+                 1: 0x21290f0bef89 <String[14]: localhost:5001>
+                 2: 0x21290f0befb1 <String[10]: Connection>
+                 3: 0x21290f0befd9 <String[10]: keep-alive>
+                 4: 0x21290f0bf001 <String[14]: Content-Length>
+                 5: 0x14c6c43039a1 <String[1]: 0>
+                 6: 0x21290f0bf029 <String[6]: Accept>
+                 7: 0x21290f0bf049 <String[3]: */*>
+                 8: 0x21290f0bf069 <String[6]: Origin>
+                 9: 0x21290f0bf089 <String[21]: http://localhost:5001>
+                  ...
+ #23# 0xc15b862f959: 0xc15b862f959 <JSFunction infLoopFunc (sfi = 0x277273948059)>
+ #24# 0x111c6c5f5691: 0x111c6c5f5691 <JSFunction (sfi = 0x2772739481e9)>
+ #25# 0x1fffed749639: 0x1fffed749639 <FixedArray[9]>
+                 0: 0xa6901c848c9 <JSFunction (sfi = 0x1155323b1639)>#107#
+                 1: 0x165eaf71ac79 <FixedArray[265]>#108#
+                 3: 0x165eaf71ac79 <FixedArray[265]>#108#
+                 4: 0xa6901c84911 <JSFunction pathtoRegexp (sfi = 0x1155323b2c41)>#109#
+                 5: 0xa6901c84959 <JSFunction debug (sfi = 0x36eb247bb49)>#110#
+                 6: 0x165eaf71e859 <JSFunction hasOwnProperty (sfi = 0x165eaf71e7a9)>#111#
+                 7: 0xa6901c849a1 <JSFunction Layer (sfi = 0x1155323b1701)>#112#
+                 8: 0xa6901c849e9 <JSFunction decode_param (sfi = 0x1155323b17c9)>#113#
+ #26# 0x1155323b3059: 0x1155323b3059 <JSFunction handle (sfi = 0x1155323b1959)>
+ #27# 0x111c6c5f59f1: 0x111c6c5f59f1 <JSArray[1]>
+                 0: 0x111c6c5f6489 <Layer map = 0xfe787104511>#5#
+ #28# 0x1fffed766ee9: 0x1fffed766ee9 <FixedArray[10]>
+                 0: 0xa6901c861d1 <JSFunction (sfi = 0x1155323aedf9)>#114#
+                 1: 0x165eaf71ac79 <FixedArray[265]>#108#
+                 3: 0x165eaf71ac79 <FixedArray[265]>#108#
+                 4: 0xa6901c86219 <JSFunction debug (sfi = 0x36eb247bb49)>#115#
+                 5: 0xa6901c82b11 <JSFunction arrayFlatten (sfi = 0x1155323b0e49)>#116#
+                 6: 0xa6901c849a1 <JSFunction Layer (sfi = 0x1155323b1701)>#112#
+                 7: 0x165eaf7485f1 <JSFunction slice (sfi = 0x165eaf748541)>#117#
+                 8: 0x165eaf71ecb9 <JSFunction toString (sfi = 0x165eaf71ec09)>#118#
+                 9: 0xa6901c86261 <JSFunction Route (sfi = 0x1155323aeec1)>#119#
+                  ...
+ #29# 0x1155323cd5f1: 0x1155323cd5f1 <JSFunction dispatch (sfi = 0x1155323af119)>
+ #30# 0x111c6c5f5b39: 0x111c6c5f5b39 <JSBoundFunction (BoundTargetFunction 0x1155323cd5f1)>
+ #31# 0x111c6c5f13a9: 0x111c6c5f13a9 <Object map = 0x3db151304829>
+ #32# 0x111c6c5f5ca9: 0x111c6c5f5ca9 <JSArray[0]>
+ #33# 0x21290f0c2941: 0x21290f0c2941 <JSFunction param (sfi = 0xba09e2af441)>
+ #34# 0x21290f0c2989: 0x21290f0c2989 <JSFunction paramCallback (sfi = 0xba09e2af509)>
+ #35# 0x1fffed767aa9: 0x1fffed767aa9 <FixedArray[25]>
+                 0: 0xa6901c86339 <JSFunction (sfi = 0x1155323ad301)>#120#
+                 1: 0x165eaf71ac79 <FixedArray[265]>#108#
+                 3: 0x165eaf71ac79 <FixedArray[265]>#108#
+                 4: 0xa6901c86261 <JSFunction Route (sfi = 0x1155323aeec1)>#119#
+                 5: 0xa6901c849a1 <JSFunction Layer (sfi = 0x1155323b1701)>#112#
+                 6: 0x1155323cf371 <JSFunction module.exports (sfi = 0x1155323cf001)>#121#
+                 7: 0xa6901c86381 <JSFunction debug (sfi = 0x36eb247bb49)>#122#
+                 8: 0xa6901c863c9 <JSFunction deprecate (sfi = 0x36eb2463939)>#123#
+                 9: 0xa6901c82b11 <JSFunction arrayFlatten (sfi = 0x1155323b0e49)>#116#
+                  ...
+ #36# 0x1155323d11f1: 0x1155323d11f1 <JSFunction process_params (sfi = 0x1155323add29)>
+ #37# 0x21290f0c0c49: 0x21290f0c0c49 <FixedArray[19]>
+                 0: 0x1155323d1191 <JSFunction handle (sfi = 0x1155323adc61)>#54#
+                 1: 0x1fffed767aa9 <FixedArray[25]>#35#
+                 3: 0x165eaf71ac79 <FixedArray[265]>#108#
+                 4: 0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#
+                 5: 0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#
+                 6: 0x111c6c5f0ee9 <JSFunction router (sfi = 0x1523f726dd61)>#9#
+                 7: 4
+                 8: 0x165eaf7027f1 <String[0]: >
+                 9: 0x165eaf7027f1 <String[0]: >
+                  ...
+ #38# 0x165eaf71b919: 0x165eaf71b919 <JSFunction Object (sfi = 0x165eaf71b869)>
+ #39# 0x165eaf71d9c9: 0x165eaf71d9c9 <JSFunction create (sfi = 0x165eaf71d919)>
+ #40# 0x111c6c5f3821: 0x111c6c5f3821 <JSFunction expressInit (sfi = 0x1523f72709e1)>
+ #41# 0x21290f0c0d39: 0x21290f0c0d39 <JSFunction trim_prefix (sfi = 0xba09e2ac291)>
+ #42# 0x111c6c5f3de9: 0x111c6c5f3de9 <JSArray[0]>
+ #43# 0x21290f0c1d39: 0x21290f0c1d39 <JSFunction param (sfi = 0xba09e2af441)>
+ #44# 0x21290f0c1d81: 0x21290f0c1d81 <JSFunction paramCallback (sfi = 0xba09e2af509)>
+ #45# 0xa6901c89501: 0xa6901c89501 <JSFunction parseExtendedQueryString (sfi = 0x1155323dccc9)>
+ #46# 0x21290f0c1411: 0x21290f0c1411 <Url map = 0xfe78710c809>
+          protocol: 0x165eaf702211 <null>
+           slashes: 0x165eaf702211 <null>
+              auth: 0x165eaf702211 <null>
+              host: 0x165eaf702211 <null>
+              port: 0x165eaf702211 <null>
+          hostname: 0x165eaf702211 <null>
+              hash: 0x165eaf702211 <null>
+            search: 0x165eaf702211 <null>
+             query: 0x165eaf702211 <null>
+          pathname: 0x21290f0bf7b1 <String[8]: /infLoop>
+              path: 0x21290f0bf7b1 <String[8]: /infLoop>
+              href: 0x21290f0bf7b1 <String[8]: /infLoop>
+              _raw: 0x21290f0bf7b1 <String[8]: /infLoop>
+ #47# 0x111c6c5f26b9: 0x111c6c5f26b9 <JSFunction query (sfi = 0x1523f726e3a9)>
+ #48# 0x111c6c5f2c89: 0x111c6c5f2c89 <JSArray[0]>
+ #49# 0x21290f0c1669: 0x21290f0c1669 <JSFunction param (sfi = 0xba09e2af441)>
+ #50# 0x21290f0c16b1: 0x21290f0c16b1 <JSFunction paramCallback (sfi = 0xba09e2af509)>
+ #51# 0x21290f0c0e61: 0x21290f0c0e61 <JSArray[0]>
+ #52# 0x111c6c5f2431: 0x111c6c5f2431 <JSArray[4]>
+                 0: 0x111c6c5f2a01 <Layer map = 0xfe787104359>#14#
+                 1: 0x111c6c5f3bd9 <Layer map = 0xfe787104359>#12#
+                 2: 0x111c6c5f4571 <Layer map = 0xfe787104359>#124#
+                 3: 0x111c6c5f5b69 <Layer map = 0xfe787104359>#8#
+ #53# 0x21290f0c0fc9: 0x21290f0c0fc9 <JSFunction (sfi = 0xba09e2acd91)>
+ #54# 0x1155323d1191: 0x1155323d1191 <JSFunction handle (sfi = 0x1155323adc61)>
+ #55# 0xa6901c82e51: 0xa6901c82e51 <JSFunction logerror (sfi = 0x36eb2468b29)>
+ #56# 0xa6901ca3f29: 0xa6901ca3f29 <JSFunction handle (sfi = 0x36eb2468f11)>
+ #57# 0x165eaf71f409: 0x165eaf71f409 <JSFunction call (sfi = 0x165eaf71f359)>
+ #58# 0x111c6c5efc71: 0x111c6c5efc71 <Object map = 0x3db151304881>
+ #59# 0x277273906ed9: 0x277273906ed9 <JSFunction emitTwo (sfi = 0x56d2a3848e9)>
+ #60# 0x56d2a386c29: 0x56d2a386c29 <JSFunction emit (sfi = 0x56d2a3854a1)>
+ #61# 0x21290f0c0a91: 0x21290f0c0a91 <Arguments map = 0x3db151313b31>
+            length: 3
+ #62# 0x21290f0bd7d9: 0x21290f0bd7d9 <WritableState map = 0x3db151356059>
+        objectMode: 0x165eaf7022f1 <false>
+     highWaterMark: 16384
+       finalCalled: 0x165eaf7022f1 <false>
+         needDrain: 0x165eaf7022f1 <false>
+            ending: 0x165eaf7022f1 <false>
+             ended: 0x165eaf7022f1 <false>
+          finished: 0x165eaf7022f1 <false>
+         destroyed: 0x165eaf7022f1 <false>
+     decodeStrings: 0x165eaf7022f1 <false>
+   defaultEncoding: 0x165eaf77dad1 <String[4]: utf8>
+            length: 0
+           writing: 0x165eaf7022f1 <false>
+            corked: 0
+              sync: 0x165eaf7022c1 <true>
+  bufferProcessing: 0x165eaf7022f1 <false>
+           onwrite: 0x21290f0bd931 <JSBoundFunction (BoundTargetFunction 0x36eb2458519)>#125#
+           writecb: 0x165eaf702211 <null>
+          writelen: 0
+   bufferedRequest: 0x165eaf702211 <null>
+lastBufferedRequest: 0x165eaf702211 <null>
+         pendingcb: 0
+       prefinished: 0x165eaf7022f1 <false>
+      errorEmitted: 0x165eaf7022f1 <false>
+bufferedRequestCount: 0
+corkedRequestsFree: 0x21290f0bd961 <Object map = 0x3db151356001>#126#
+ #63# 0xa6901c87419: 0xa6901c87419 <JSArray[33]>
+                 0: 0xa6901c9a7a9 <String[6]: DELETE>
+                 1: 0xa6901c9a7c9 <String[3]: GET>
+                 2: 0xa6901c9a7e9 <String[4]: HEAD>
+                 3: 0xa6901c9a809 <String[4]: POST>
+                 4: 0xa6901c9a829 <String[3]: PUT>
+                 5: 0xa6901c9a849 <String[7]: CONNECT>
+                 6: 0xa6901c9a869 <String[7]: OPTIONS>
+                 7: 0xa6901c9a889 <String[5]: TRACE>
+                 8: 0xa6901c9a8a9 <String[4]: COPY>
+                 9: 0xa6901c9a8c9 <String[4]: LOCK>
+                  ...
+ #64# 0x21290f0becb1: 0x21290f0becb1 <JSBoundFunction (BoundTargetFunction 0xa6901c85f71)>
+ #65# 0x21290f0bf8c1: 0x21290f0bf8c1 <ReadableState map = 0x3db1513553a1>
+        objectMode: 0x165eaf7022f1 <false>
+     highWaterMark: 16384
+            buffer: 0x21290f0bf9c9 <BufferList map = 0x3db151354d19>#127#
+            length: 0
+             pipes: 0x165eaf702211 <null>
+        pipesCount: 0
+           flowing: 0x165eaf702211 <null>
+             ended: 0x165eaf7022f1 <false>
+        endEmitted: 0x165eaf7022f1 <false>
+           reading: 0x165eaf7022f1 <false>
+              sync: 0x165eaf7022c1 <true>
+      needReadable: 0x165eaf7022f1 <false>
+   emittedReadable: 0x165eaf7022f1 <false>
+ readableListening: 0x165eaf7022f1 <false>
+   resumeScheduled: 0x165eaf7022f1 <false>
+         destroyed: 0x165eaf7022f1 <false>
+   defaultEncoding: 0x165eaf77dad1 <String[4]: utf8>
+        awaitDrain: 0
+       readingMore: 0x165eaf7022c1 <true>
+           decoder: 0x165eaf702211 <null>
+          encoding: 0x165eaf702211 <null>
+ #66# 0x21290f0bfa91: 0x21290f0bfa91 <Object map = 0x3db151304881>
+ #67# 0x21290f0bfaa9: 0x21290f0bfaa9 <Object map = 0xfe7871106f1>
+              host: 0x21290f0bef89 <String[14]: localhost:5001>
+        connection: 0x21290f0befd9 <String[10]: keep-alive>
+    content-length: 0x14c6c43039a1 <String[1]: 0>
+            accept: 0x21290f0bf049 <String[3]: */*>
+            origin: 0x21290f0bf089 <String[21]: http://localhost:5001>
+  x-requested-with: 0x21290f0bf0e1 <String[14]: XMLHttpRequest>
+        user-agent: 0x21290f0bf131 <String[105]: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36>
+           referer: 0x21290f0bf1d9 <String[22]: http://localhost:5001/>
+   accept-encoding: 0x21290f0bf379 <String[17]: gzip, deflate, br>
+   accept-language: 0x21290f0bf3d1 <String[35]: ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4>
+            cookie: 0x21290f0bf431 <String[415]: Phpstorm-288f91c0=64e460a6-d58a-42d2-b8b2-47732b71ee65; PHPSESSID=ce5109k90cbrfglrc3f2mo8da1; sid=Fe26.2**8159f68bfb043278c3583bb0ce305b6a40ab685746055a76f02f69436adfd621*HSgWzIlklQxwKu2ae7zk1g*j8eiL6Y2l6q9gWH5NFcfYVTB17wlBjUtJqRrLACTkerWmgQW-70mhYL0fcMtSDc2yQ15IWNJmMhwnfBkCduSeg**3a4fb9f4a5c5bbfd065afb2a47830d4f7995cc20c8d02dcc70fffc2267d2b37a*D174m5v6JZ-xanGyyfxBv5JRh0Cj_4P3-RUB20_go7s; io=_GsZKbnVw119Cax9AAAA>
+ #68# 0x21290f0bfb21: 0x21290f0bfb21 <Object map = 0x3db151304829>
+ #69# 0x21290f0bfb69: 0x21290f0bfb69 <JSArray[0]>
+ #70# 0x21290f0c2449: 0x21290f0c2449 <Object map = 0x3db151304829>
+ #71# 0x21290f0c1a31: 0x21290f0c1a31 <Object map = 0x3db151304829>
+ #72# 0x21290f0c05f9: 0x21290f0c05f9 <Object map = 0x3db151304881>
+ #73# 0x21290f0c0611: 0x21290f0c0611 <JSArray[0]>
+ #74# 0x21290f0c0641: 0x21290f0c0641 <JSArray[0]>
+ #75# 0x21290f0c0671: 0x21290f0c0671 <JSArray[0]>
+ #76# 0x21290f0c0939: 0x21290f0c0939 <JSBoundFunction (BoundTargetFunction 0xa6901c85c59)>
+ #77# 0x21290f0c2391: 0x21290f0c2391 <Object map = 0x3db151304881>
+ #78# 0x111c6c5f65a1: 0x111c6c5f65a1 <JSArray[0]>
+ #79# 0x111c6c5f69e9: 0x111c6c5f69e9 <JSRegExp <String[5]: ^\/?$>>
+         lastIndex: 0
+         fast_star: 0x165eaf7022f1 <false>
+        fast_slash: 0x165eaf7022f1 <false>
+ #80# 0x111c6c5f5ab1: 0x111c6c5f5ab1 <Object map = 0xfe787104619>
+              post: 0x165eaf7022c1 <true>
+ #81# 0x111c6c5f6131: 0x111c6c5f6131 <JSRegExp <String[14]: ^\/infLoop\/?$>>
+         lastIndex: 0
+         fast_star: 0x165eaf7022f1 <false>
+        fast_slash: 0x165eaf7022f1 <false>
+ #82# 0x111c6c5f20d1: 0x111c6c5f20d1 <JSArray[0]>
+ #83# 0x21290f0c1bb1: 0x21290f0c1bb1 <Object map = 0x3db151304829>
+ #84# 0x111c6c5f4239: 0x111c6c5f4239 <JSRegExp <String[12]: ^\/?(?=\/|$)>>
+         lastIndex: 0
+         fast_star: 0x165eaf7022f1 <false>
+        fast_slash: 0x165eaf7022c1 <true>
+ #85# 0x21290f0c14f1: 0x21290f0c14f1 <Object map = 0x3db151304829>
+ #86# 0x111c6c5f3431: 0x111c6c5f3431 <JSRegExp <String[12]: ^\/?(?=\/|$)>>
+         lastIndex: 0
+         fast_star: 0x165eaf7022f1 <false>
+        fast_slash: 0x165eaf7022c1 <true>
+ #87# 0x111c6c5ee0f9: 0x111c6c5ee0f9 <Object map = 0x3db151304881>
+ #88# 0x111c6c5ec411: 0x111c6c5ec411 <Object map = 0xfe78710cee9>
+ #89# 0x111c6c5eccd9: 0x111c6c5eccd9 <Object map = 0xfe78710d939>
+ #90# 0x111c6c5eceb1: 0x111c6c5eceb1 <Object map = 0x3db151304829>
+ #91# 0x111c6c5ecef9: 0x111c6c5ecef9 <Object map = 0x3db151304829>
+ #92# 0x111c6c5ecf99: 0x111c6c5ecf99 <Object map = 0xfe787102db1>
+      x-powered-by: 0x165eaf7022c1 <true>
+              etag: 0x36eb2467f59 <String[4]: weak>
+               env: 0x36eb2467f09 <String[11]: development>
+      query parser: 0x36eb2467fa1 <String[8]: extended>
+  subdomain offset: 2
+       trust proxy: 0x165eaf7022f1 <false>
+@@symbol:trust_proxy_default: 0x165eaf7022c1 <true>
+             views: 0x111c6c5ef1f9 <String[60]: /home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/views>
+jsonp callback name: 0x165eaf7194e1 <String[8]: callback>
+ #93# 0x111c6c5ee249: 0x111c6c5ee249 <Object map = 0x3db151304881>
+ #94# 0x111c6c5ffc79: 0x111c6c5ffc79 <TCP map = 0xfe7871050c1>
+           reading: 0x165eaf7022f1 <false>
+             owner: 0x111c6c5ef611 <Server map = 0xfe787105171>#18#
+            onread: 0x165eaf702211 <null>
+      onconnection: 0xc15b8631d41 <JSFunction onconnection (sfi = 0x27727395b2f9)>#128#
+    writeQueueSize: 0
+ #95# 0x111c6c5f0671: 0x111c6c5f0671 <JSArray[0]>
+ #96# 0x21290f0bd469: 0x21290f0bd469 <TCP map = 0xfe787109b01>
+           reading: 0x165eaf7022c1 <true>
+             owner: 0x21290f0bd541 <Socket map = 0xfe787110749>#19#
+            onread: 0xc15b862f489 <JSFunction onread (sfi = 0x27727395a5b1)>#129#
+      onconnection: 0x165eaf702211 <null>
+    writeQueueSize: 0
+         _consumed: 0x165eaf7022c1 <true>
+ #97# 0x21290f0bd639: 0x21290f0bd639 <ReadableState map = 0x3db1513553a1>
+        objectMode: 0x165eaf7022f1 <false>
+     highWaterMark: 16384
+            buffer: 0x21290f0bd6f9 <BufferList map = 0x3db151354d19>#130#
+            length: 0
+             pipes: 0x165eaf702211 <null>
+        pipesCount: 0
+           flowing: 0x165eaf7022c1 <true>
+             ended: 0x165eaf7022f1 <false>
+        endEmitted: 0x165eaf7022f1 <false>
+           reading: 0x165eaf7022c1 <true>
+              sync: 0x165eaf7022f1 <false>
+      needReadable: 0x165eaf7022c1 <true>
+   emittedReadable: 0x165eaf7022f1 <false>
+ readableListening: 0x165eaf7022f1 <false>
+   resumeScheduled: 0x165eaf7022f1 <false>
+         destroyed: 0x165eaf7022f1 <false>
+   defaultEncoding: 0x165eaf77dad1 <String[4]: utf8>
+        awaitDrain: 0
+       readingMore: 0x165eaf7022f1 <false>
+           decoder: 0x165eaf702211 <null>
+          encoding: 0x165eaf702211 <null>
+ #98# 0x21290f0bd7c1: 0x21290f0bd7c1 <Object map = 0x3db151304881>
+ #99# 0x21290f0a1941: 0x21290f0a1941 <TimersList map = 0xfe787108d41>
+         _idleNext: 0x21290f0bd541 <Socket map = 0xfe787110749>#19#
+         _idlePrev: 0x21290f0bd541 <Socket map = 0xfe787110749>#19#
+            _timer: 0x21290f0a1a71 <Timer map = 0xfe787108fa9>#131#
+          _unrefed: 0x165eaf7022c1 <true>
+             msecs: 120000
+          nextTick: 0x165eaf7022f1 <false>
+ #100# 0x21290f0be741: 0x21290f0be741 <JSBoundFunction (BoundTargetFunction 0xa6901c85e09)>
+ #101# 0x21290f0be7a1: 0x21290f0be7a1 <JSBoundFunction (BoundTargetFunction 0xa6901c85dc1)>
+ #102# 0x21290f0be7f1: 0x21290f0be7f1 <JSBoundFunction (BoundTargetFunction 0xa6901c85d31)>
+ #103# 0x21290f0be841: 0x21290f0be841 <JSBoundFunction (BoundTargetFunction 0xa6901c85ca1)>
+ #104# 0x21290f0be6b1: 0x21290f0be6b1 <JSArray[0]>
+ #105# 0x21290f0be6e1: 0x21290f0be6e1 <JSArray[1]>
+                 0: 0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#
+ #106# 0x21290f0bd3a1: 0x21290f0bd3a1 <JSArray[0]>
+ #107# 0xa6901c848c9: 0xa6901c848c9 <JSFunction (sfi = 0x1155323b1639)>
+ #108# 0x165eaf71ac79: 0x165eaf71ac79 <FixedArray[265]>
+                 0: 0x165eaf71ba49 <JSFunction (sfi = 0x165eaf71b999)>#132#
+                 1: 0
+                 2: 0x165eaf71cef1 <JSObject>#0#
+                 3: 0x165eaf71ac79 <FixedArray[265]>#108#
+                 4: 0x14c6c43090d9 <JSGlobal Object>#1#
+                 5: 0x14c6c431e289 <FixedArray[33]>#133#
+                 6: 0x3db15131aca1 <Map(FAST_HOLEY_ELEMENTS)>#134#
+                 7: 0x165eaf702241 <undefined>
+                 8: 0x165eaf733041 <JSFunction ArrayBuffer (sfi = 0x165eaf732f91)>#135#
+                 9: 0x3db151310e29 <Map(FAST_HOLEY_SMI_ELEMENTS)>#136#
+                  ...
+ #109# 0xa6901c84911: 0xa6901c84911 <JSFunction pathtoRegexp (sfi = 0x1155323b2c41)>
+ #110# 0xa6901c84959: 0xa6901c84959 <JSFunction debug (sfi = 0x36eb247bb49)>
+         namespace: 0x1155323b13d9 <String[20]: express:router:layer>
+           enabled: 0x165eaf7022f1 <false>
+         useColors: 0x165eaf7022c1 <true>
+             color: 3
+       inspectOpts: 0xa6901c97931 <Object map = 0x3db151304829>#137#
+ #111# 0x165eaf71e859: 0x165eaf71e859 <JSFunction hasOwnProperty (sfi = 0x165eaf71e7a9)>
+ #112# 0xa6901c849a1: 0xa6901c849a1 <JSFunction Layer (sfi = 0x1155323b1701)>
+ #113# 0xa6901c849e9: 0xa6901c849e9 <JSFunction decode_param (sfi = 0x1155323b17c9)>
+ #114# 0xa6901c861d1: 0xa6901c861d1 <JSFunction (sfi = 0x1155323aedf9)>
+ #115# 0xa6901c86219: 0xa6901c86219 <JSFunction debug (sfi = 0x36eb247bb49)>
+         namespace: 0x1155323aeae1 <String[20]: express:router:route>
+           enabled: 0x165eaf7022f1 <false>
+         useColors: 0x165eaf7022c1 <true>
+             color: 3
+       inspectOpts: 0xa6901c97ef9 <Object map = 0x3db151304829>#138#
+ #116# 0xa6901c82b11: 0xa6901c82b11 <JSFunction arrayFlatten (sfi = 0x1155323b0e49)>
+ #117# 0x165eaf7485f1: 0x165eaf7485f1 <JSFunction slice (sfi = 0x165eaf748541)>
+ #118# 0x165eaf71ecb9: 0x165eaf71ecb9 <JSFunction toString (sfi = 0x165eaf71ec09)>
+ #119# 0xa6901c86261: 0xa6901c86261 <JSFunction Route (sfi = 0x1155323aeec1)>
+ #120# 0xa6901c86339: 0xa6901c86339 <JSFunction (sfi = 0x1155323ad301)>
+ #121# 0x1155323cf371: 0x1155323cf371 <JSFunction module.exports (sfi = 0x1155323cf001)>
+ #122# 0xa6901c86381: 0xa6901c86381 <JSFunction debug (sfi = 0x36eb247bb49)>
+         namespace: 0x1155323ac769 <String[14]: express:router>
+           enabled: 0x165eaf7022f1 <false>
+         useColors: 0x165eaf7022c1 <true>
+             color: 1
+       inspectOpts: 0xa6901c98569 <Object map = 0x3db151304829>#139#
+ #123# 0xa6901c863c9: 0xa6901c863c9 <JSFunction deprecate (sfi = 0x36eb2463939)>
+             _file: 0x1155323ac5f1 <String[95]: /home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/node_modules/express/lib/router/index.js>
+          _ignored: 0x165eaf7022f1 <false>
+        _namespace: 0x277273947c41 <String[7]: express>
+           _traced: 0x165eaf7022f1 <false>
+           _warned: 0xa6901c985a1 <Object map = 0x3db151304881>#140#
+ #124# 0x111c6c5f4571: 0x111c6c5f4571 <Layer map = 0xfe787104359>
+            handle: 0x111c6c5f4541 <JSBoundFunction (BoundTargetFunction 0x1155323cd5f1)>#141#
+              name: 0x111c6c5f46b9 <String[14]: bound dispatch>
+            params: 0x165eaf702241 <undefined>
+              path: 0x165eaf702241 <undefined>
+              keys: 0x111c6c5f46e1 <JSArray[0]>#142#
+            regexp: 0x111c6c5f4b29 <JSRegExp <String[5]: ^\/?$>>#143#
+             route: 0x111c6c5f4299 <Route map = 0xfe7871044b9>#144#
+ #125# 0x21290f0bd931: 0x21290f0bd931 <JSBoundFunction (BoundTargetFunction 0x36eb2458519)>
+ #126# 0x21290f0bd961: 0x21290f0bd961 <Object map = 0x3db151356001>
+              next: 0x165eaf702211 <null>
+             entry: 0x165eaf702211 <null>
+            finish: 0x21290f0bd9c1 <JSBoundFunction (BoundTargetFunction 0x36eb24587a1)>#145#
+ #127# 0x21290f0bf9c9: 0x21290f0bf9c9 <BufferList map = 0x3db151354d19>
+              head: 0x165eaf702211 <null>
+              tail: 0x165eaf702211 <null>
+            length: 0
+ #128# 0xc15b8631d41: 0xc15b8631d41 <JSFunction onconnection (sfi = 0x27727395b2f9)>
+ #129# 0xc15b862f489: 0xc15b862f489 <JSFunction onread (sfi = 0x27727395a5b1)>
+ #130# 0x21290f0bd6f9: 0x21290f0bd6f9 <BufferList map = 0x3db151354d19>
+              head: 0x165eaf702211 <null>
+              tail: 0x165eaf702211 <null>
+            length: 0
+ #131# 0x21290f0a1a71: 0x21290f0a1a71 <Timer map = 0xfe787108fa9>
+             _list: 0x21290f0a1941 <TimersList map = 0xfe787108d41>#99#
+ #132# 0x165eaf71ba49: 0x165eaf71ba49 <JSFunction (sfi = 0x165eaf71b999)>
+ #133# 0x14c6c431e289: 0x14c6c431e289 <FixedArray[33]>
+                 0: 0x165eaf702241 <undefined>
+                 1: 0x165eaf702241 <undefined>
+                 2: 0x165eaf702241 <undefined>
+                 3: 0x165eaf702241 <undefined>
+                 4: 0x165eaf702241 <undefined>
+                 5: 0x165eaf702241 <undefined>
+                 6: 0x165eaf702241 <undefined>
+                 7: 0x165eaf702241 <undefined>
+                 8: 0x165eaf702241 <undefined>
+                 9: 0x165eaf702241 <undefined>
+                  ...
+ #134# 0x3db15131aca1: 0x3db15131aca1 <Map(FAST_HOLEY_ELEMENTS)>
+ #135# 0x165eaf733041: 0x165eaf733041 <JSFunction ArrayBuffer (sfi = 0x165eaf732f91)>
+ #136# 0x3db151310e29: 0x3db151310e29 <Map(FAST_HOLEY_SMI_ELEMENTS)>
+ #137# 0xa6901c97931: 0xa6901c97931 <Object map = 0x3db151304829>
+ #138# 0xa6901c97ef9: 0xa6901c97ef9 <Object map = 0x3db151304829>
+ #139# 0xa6901c98569: 0xa6901c98569 <Object map = 0x3db151304829>
+ #140# 0xa6901c985a1: 0xa6901c985a1 <Object map = 0x3db151304881>
+ #141# 0x111c6c5f4541: 0x111c6c5f4541 <JSBoundFunction (BoundTargetFunction 0x1155323cd5f1)>
+ #142# 0x111c6c5f46e1: 0x111c6c5f46e1 <JSArray[0]>
+ #143# 0x111c6c5f4b29: 0x111c6c5f4b29 <JSRegExp <String[5]: ^\/?$>>
+         lastIndex: 0
+         fast_star: 0x165eaf7022f1 <false>
+        fast_slash: 0x165eaf7022f1 <false>
+ #144# 0x111c6c5f4299: 0x111c6c5f4299 <Route map = 0xfe7871044b9>
+              path: 0x165eaf763bf9 <String[1]: />
+             stack: 0x111c6c5f4341 <JSArray[1]>#146#
+           methods: 0x111c6c5f4451 <Object map = 0xfe787104569>#147#
+ #145# 0x21290f0bd9c1: 0x21290f0bd9c1 <JSBoundFunction (BoundTargetFunction 0x36eb24587a1)>
+ #146# 0x111c6c5f4341: 0x111c6c5f4341 <JSArray[1]>
+                 0: 0x111c6c5f4e39 <Layer map = 0xfe787104511>#148#
+ #147# 0x111c6c5f4451: 0x111c6c5f4451 <Object map = 0xfe787104569>
+               get: 0x165eaf7022c1 <true>
+ #148# 0x111c6c5f4e39: 0x111c6c5f4e39 <Layer map = 0xfe787104511>
+            handle: 0x111c6c5f0ba1 <JSFunction (sfi = 0x277273948121)>#149#
+              name: 0x36eb2464271 <String[11]: <anonymous>>
+            params: 0x165eaf702241 <undefined>
+              path: 0x165eaf702241 <undefined>
+              keys: 0x111c6c5f4f91 <JSArray[0]>#150#
+            regexp: 0x111c6c5f5469 <JSRegExp <String[5]: ^\/?$>>#151#
+            method: 0x165eaf703221 <String[3]: get>
+ #149# 0x111c6c5f0ba1: 0x111c6c5f0ba1 <JSFunction (sfi = 0x277273948121)>
+ #150# 0x111c6c5f4f91: 0x111c6c5f4f91 <JSArray[0]>
+ #151# 0x111c6c5f5469: 0x111c6c5f5469 <JSRegExp <String[5]: ^\/?$>>
+         lastIndex: 0
+         fast_star: 0x165eaf7022f1 <false>
+        fast_slash: 0x165eaf7022f1 <false>
+=====================
+

@@ -1,0 +1,22 @@
+
+==== JS stack trace =========================================
+
+Security context: ...tl;dr...
+
+==== Details ================================================
+
+[1]: infLoopFunc [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/app1.js:~18] [pc=0x2a589a63c40e](this=0x14c6c43090d9 <JSGlobal Object>#1#) {
+// optimized frame
+--------- s o u r c e   c o d e ---------
+function infLoopFunc() {\x0a    //this will lock server\x0a    while(1) {;}\x0a}
+-----------------------------------------
+}
+[3]: /* anonymous */ [/home/ukrbublik/projs/habr_arcticle_1/1-break-inf-loop/app1.js:13] [bytecode=0x3315247521b1 offset=5](this=0x14c6c43090d9 <JSGlobal Object>#1#,req=0x21290f0bf7d1 <IncomingMessage map = 0xfe787110a61>#2#,res=0x21290f0c04d9 <ServerResponse map = 0xfe78710cff1>#3#,next=0x21290f0c2a39 <JSFunction next (sfi = 0xba09e2b3be1)>#4#) {
+  // expression stack (top to bottom)
+  [02] : 0x165eaf702241 <undefined>
+  [01] : 0x165eaf702241 <undefined>
+  [00] : 0xc15b862f959 <JSFunction infLoopFunc (sfi = 0x277273948059)>#23#
+--------- s o u r c e   c o d e ---------
+function (req, res, next) {\x0a    infLoopFunc();\x0a    //code will never get here\x0a    res.json({'res': "ok"});\x0a}
+-----------------------------------------
+}
