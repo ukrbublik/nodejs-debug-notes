@@ -6,6 +6,7 @@
         $(function () {
             $("#infLoop").click(function() {
                 $.post("/infLoop", {}, function(res) {
+                    //will never get here
                     if (res.res == 'ok') {
                         alert("ok");
                     } else {
@@ -21,7 +22,13 @@
     <button id="infLoop">Make inf loop</button>
     <br>
     <pre>
+    Click "Make inf loop".
+    Server should be fully blocked with 100% CPU usage.
     Run in cmd to break inf loop: `npm run terminate-loop`
+    Stack trace should be saved to `gdb-logs` dir.
+    You can find guilty piece of code here.
+    (Also server can continue working)
+    See `loop-terminator.sh`
     </pre>
 </body>
 </html>

@@ -1,12 +1,11 @@
 {
-  "name": "0-inspect",
+  "name": "0-profiling",
   "version": "1.0.0",
-  "description": "",
+  "description": "Profiling NodeJs application",
   "main": "app0.js",
   "scripts": {
     "inspect": "node --inspect --expose-gc app0.js",
     "prof": "node --prof --expose-gc app0.js prof && ./prof-report.sh",
-    "prof-report": "./prof-report.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "ukrbublik",

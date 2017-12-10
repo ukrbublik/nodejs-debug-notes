@@ -10,9 +10,15 @@ app.get('/', function(req, res, next) {
 });
 
 app.post('/infLoop', function(req, res, next) {
-    while(1) {;}
+    infLoopFunc();
+    //code will never get here
     res.json({'res': "ok"});
 });
+
+function infLoopFunc() {
+    //this will lock server
+    while(1) {;}
+}
 
 http.listen(listenPort, function() {
     console.log("Listening on port "+listenPort);

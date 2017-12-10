@@ -14,7 +14,7 @@ Socket connection should be automatically established (first button will have na
 After WS is connected, press "Recreate worker", then "Disconnect".  
 You will get 100% load of 1 CPU core on server (see `htop`).
 
-----
+---
 
 Maybe bug in libuv? Similar bugs?  
 https://github.com/joyent/libuv/issues/1099  
