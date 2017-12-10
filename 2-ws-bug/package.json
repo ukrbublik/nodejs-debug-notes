@@ -1,7 +1,7 @@
 {
   "name": "2-ws-bug",
   "version": "1.0.0",
-  "description": "Test 2 - 100% CPU bug with WebSocket and ChildProcess on NodeJs < 8.5.0",
+  "description": "CPU 100% bug with WebSocket and ChildProcess on NodeJs < 8.5.0",
   "main": "app2.js",
   "dependencies": {
     "express": "^4.16.2",

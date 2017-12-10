@@ -1,7 +1,7 @@
 {
-  "name": "1-inf-loop",
+  "name": "1-break-inf-loop",
   "version": "1.0.0",
-  "description": "",
+  "description": "Break infinite loop in JS code or another locking JS code",
   "main": "app1.js",
   "scripts": {
     "start": "node app1.js",
