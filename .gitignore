@@ -1,6 +1,10 @@
 node_modules
 npm-debug.log
 package-lock.json
+
 1-inf-loop/gdb-logs
+0-inspect/prof-reports
+0-inspect/isolate-*-v8.log
+
 3-leaks
 todo.txt

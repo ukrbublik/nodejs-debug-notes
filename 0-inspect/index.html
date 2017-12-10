@@ -1,0 +1,33 @@
+<!doctype html>  
+<html lang="en">  
+<head>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+            $("#runCpuIntensiveTask").click(function() {
+                $.post("/runCpuIntensiveTask", {}, function(res) {
+                    if (res.res == 'ok') {
+                        alert("ok");
+                    } else {
+                        alert(res.err);
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Test app 0</h1>
+    <button id="runCpuIntensiveTask">Run CPU intensive task</button>
+    <br>
+    <pre>
+    Open chrome://inspect
+    Start recording CPU profile ("Profiler" tab in inspector window)
+    Click "Run CPU intensive task"
+    Wait for 'ok' alert
+    Stop recording CPU profile
+    Analyze results
+    </pre>
+</body>
+</html>
+

@@ -94,8 +94,8 @@ if [ -z "$_LOGS_DIR" ]; then
     echo "==========="
     echo "Stack trace has been printed to nodejs app output"
 else
-    TODAY=`date +%Y_%m_%d__%H_%M_%S`
-    TRACE_FILENAME="$TODAY.txt"
+    NOW=`date +%Y_%m_%d__%H_%M_%S`
+    TRACE_FILENAME="$NOW.txt"
     TRACE_PATH="$_LOGS_DIR/$TRACE_FILENAME"
     TRACE_FULLPATH=`realpath "$TRACE_PATH"`
     touch "$TRACE_FULLPATH"
