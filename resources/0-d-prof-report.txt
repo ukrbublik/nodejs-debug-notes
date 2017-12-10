@@ -1,0 +1,453 @@
+Statistical profiling result from ./isolate-0x4096ce0-v8.log, (3463 ticks, 168 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+     33    1.0%          /lib/x86_64-linux-gnu/libc-2.23.so
+      2    0.1%          [vdso]
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+    440   12.7%   12.8%  Stub: StringAddStub_CheckNone_NotTenured
+    398   11.5%   11.6%  Builtin: KeyedLoadIC_Megamorphic
+    290    8.4%    8.5%  LazyCompile: *derez /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:46:27
+     50    1.4%    1.5%  Stub: StringAddStub_ConvertRight_NotTenured
+     48    1.4%    1.4%  Builtin: KeyedLoadIC
+     38    1.1%    1.1%  Stub: CEntryStub
+     34    1.0%    1.0%  Handler: prototype
+     11    0.3%    0.3%  Builtin: KeyedLoadICTrampoline
+     10    0.3%    0.3%  Stub: StringAddStub_ConvertLeft_NotTenured
+      9    0.3%    0.3%  Handler: prototype {1}
+      3    0.1%    0.1%  Function: ~normalizeStringPosix path.js:99:30
+      2    0.1%    0.1%  Function: ~set native collection.js:247:16
+      2    0.1%    0.1%  Function: ~Module._resolveLookupPaths module.js:331:38
+      1    0.0%    0.0%  Stub: StoreFastElementStub
+      1    0.0%    0.0%  Function: ~tryFile module.js:136:17
+      1    0.0%    0.0%  Function: ~nextPart fs.js:1575:31
+      1    0.0%    0.0%  Function: ~derez /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:46:27
+      1    0.0%    0.0%  Function: ~createServerErrorConstructor /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/http-errors/index.js:178:39
+      1    0.0%    0.0%  Function: ~basename path.js:1380:30
+      1    0.0%    0.0%  Builtin: StringPrototypeSlice
+      1    0.0%    0.0%  Builtin: StringCharCodeAt
+      1    0.0%    0.0%  Builtin: ObjectHasOwnProperty
+      1    0.0%    0.0%  Builtin: InterpreterEntryTrampoline
+
+ [C++]:
+   ticks  total  nonlib   name
+    287    8.3%    8.4%  v8::internal::IntToCString(int, v8::internal::Vector<char>)
+    176    5.1%    5.1%  v8::internal::Heap::AllocateRawOneByteString(int, v8::internal::PretenureFlag)
+    152    4.4%    4.4%  v8::internal::(anonymous namespace)::CopyObjectToObjectElements(v8::internal::FixedArrayBase*, v8::internal::ElementsKind, unsigned int, v8::internal::FixedArrayBase*, v8::internal::ElementsKind, unsigned int, int)
+    132    3.8%    3.9%  v8::internal::LargeObjectSpace::AllocateRaw(int, v8::internal::Executability)
+    125    3.6%    3.6%  v8::internal::Factory::SetNumberStringCache(v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::String>)
+     98    2.8%    2.9%  v8::internal::Heap::AllocateRaw(int, v8::internal::AllocationSpace, v8::internal::AllocationAlignment)
+     97    2.8%    2.8%  strlen
+     76    2.2%    2.2%  v8::internal::IncrementalMarking::WhiteToGreyAndPush(v8::internal::HeapObject*)
+     69    2.0%    2.0%  v8::internal::Factory::NewStringFromOneByte(v8::internal::Vector<unsigned char const>, v8::internal::PretenureFlag)
+     63    1.8%    1.8%  v8::internal::Factory::NumberToString(v8::internal::Handle<v8::internal::Object>, bool)
+     57    1.6%    1.7%  v8::internal::Factory::NewRawOneByteString(int, v8::internal::PretenureFlag)
+     40    1.2%    1.2%  v8::internal::PagedSpace::AllocateRawUnaligned(int, v8::internal::PagedSpace::UpdateSkipList)
+     40    1.2%    1.2%  v8::internal::IncrementalMarkingMarkingVisitor::VisitFixedArrayIncremental(v8::internal::Map*, v8::internal::HeapObject*)
+     40    1.2%    1.2%  v8::internal::Factory::GetNumberStringCache(v8::internal::Handle<v8::internal::Object>)
+     40    1.2%    1.2%  node::(anonymous namespace)::ContextifyScript::New(v8::FunctionCallbackInfo<v8::Value> const&)
+     31    0.9%    0.9%  v8::internal::Runtime_NumberToString(int, v8::internal::Object**, v8::internal::Isolate*)
+     26    0.8%    0.8%  v8::internal::Space::AllocationStep(unsigned char*, int)
+     20    0.6%    0.6%  v8::internal::IncrementalMarking::RecordWriteSlow(v8::internal::HeapObject*, v8::internal::Object**, v8::internal::Object*)
+     14    0.4%    0.4%  v8::internal::Heap::RecordWrite(v8::internal::Object*, int, v8::internal::Object*)
+     13    0.4%    0.4%  v8::internal::MemoryChunkIterator::next()
+     13    0.4%    0.4%  _init
+     12    0.3%    0.4%  v8::internal::IncrementalMarking::Step(unsigned long, v8::internal::IncrementalMarking::CompletionAction, v8::internal::IncrementalMarking::ForceCompletionAction, v8::internal::StepOrigin)
+     12    0.3%    0.4%  v8::internal::BitVector::Iterator::Advance()
+     11    0.3%    0.3%  write
+      8    0.2%    0.2%  v8::internal::compiler::CodeAssemblerLabel::UpdateVariablesAfterBind()
+      8    0.2%    0.2%  v8::internal::Zone::New(unsigned long)
+      7    0.2%    0.2%  v8::internal::compiler::LinearScanAllocator::FindFreeRegistersForRange(v8::internal::compiler::LiveRange*, v8::internal::Vector<v8::internal::compiler::LifetimePosition>)
+      7    0.2%    0.2%  v8::internal::Heap::FullSizeNumberStringCacheLength()
+      6    0.2%    0.2%  v8::internal::compiler::MoveOptimizer::MigrateMoves(v8::internal::compiler::Instruction*, v8::internal::compiler::Instruction*)
+      6    0.2%    0.2%  __libc_malloc
+      5    0.1%    0.1%  v8::internal::compiler::LiveRangeConnector::ResolveControlFlow(v8::internal::Zone*)
+      5    0.1%    0.1%  v8::internal::HeapObject::SizeFromMap(v8::internal::Map*)
+      4    0.1%    0.1%  v8::internal::compiler::LiveRangeBuilder::ProcessInstructions(v8::internal::compiler::InstructionBlock const*, v8::internal::BitVector*)
+      4    0.1%    0.1%  v8::internal::compiler::LiveRange::Covers(v8::internal::compiler::LifetimePosition) const
+      4    0.1%    0.1%  v8::internal::compiler::LinearScanAllocator::AllocateRegisters()
+      4    0.1%    0.1%  v8::internal::compiler::JumpThreading::ApplyForwarding(v8::internal::ZoneVector<v8::internal::compiler::RpoNumber>&, v8::internal::compiler::InstructionSequence*)
+      4    0.1%    0.1%  v8::internal::compiler::InstructionSequence::InstructionBlocksFor(v8::internal::Zone*, v8::internal::compiler::Schedule const*)
+      4    0.1%    0.1%  v8::internal::compiler::CodeGenerator::AssembleMove(v8::internal::compiler::InstructionOperand*, v8::internal::compiler::InstructionOperand*)
+      4    0.1%    0.1%  v8::internal::MemoryChunk::Initialize(v8::internal::Heap*, unsigned char*, unsigned long, unsigned char*, unsigned char*, v8::internal::Executability, v8::internal::Space*, v8::base::VirtualMemory*)
+      4    0.1%    0.1%  std::_Rb_tree_increment(std::_Rb_tree_node_base const*)
+      3    0.1%    0.1%  void std::vector<v8::internal::compiler::BasicBlock*, v8::internal::ZoneAllocator<v8::internal::compiler::BasicBlock*> >::_M_emplace_back_aux<v8::internal::compiler::BasicBlock* const&>(v8::internal::compiler::BasicBlock* const&)
+      3    0.1%    0.1%  v8::internal::compiler::TopLevelLiveRange::AddUseInterval(v8::internal::compiler::LifetimePosition, v8::internal::compiler::LifetimePosition, v8::internal::Zone*)
+      3    0.1%    0.1%  v8::internal::compiler::OperandAssigner::CommitAssignment()
+      3    0.1%    0.1%  v8::internal::compiler::MoveOptimizer::RemoveClobberedDestinations(v8::internal::compiler::Instruction*)
+      3    0.1%    0.1%  v8::internal::compiler::LiveRangeSeparator::Splinter()
+      3    0.1%    0.1%  v8::internal::compiler::LiveRangeBuilder::BuildLiveRanges()
+      3    0.1%    0.1%  v8::internal::compiler::LiveRange::FirstIntersection(v8::internal::compiler::LiveRange*) const
+      3    0.1%    0.1%  v8::internal::compiler::ConstraintBuilder::MeetConstraintsBefore(int)
+      3    0.1%    0.1%  v8::internal::JsonParser<true>::ParseJsonString(v8::internal::Handle<v8::internal::String>)
+      3    0.1%    0.1%  v8::internal::Heap::Scavenge()
+      3    0.1%    0.1%  mmap
+      3    0.1%    0.1%  _IO_vfprintf
+      2    0.1%    0.1%  void v8::internal::BodyDescriptorBase::IteratePointers<v8::internal::IncrementalMarkingMarkingVisitor>(v8::internal::Heap*, v8::internal::HeapObject*, int, int)
+      2    0.1%    0.1%  v8::internal::compiler::TopLevelLiveRange::Merge(v8::internal::compiler::TopLevelLiveRange*, v8::internal::Zone*)
+      2    0.1%    0.1%  v8::internal::compiler::SpecialRPONumberer::ComputeAndInsertSpecialRPO(v8::internal::compiler::BasicBlock*, v8::internal::compiler::BasicBlock*)
+      2    0.1%    0.1%  v8::internal::compiler::ReferenceMapPopulator::PopulateReferenceMaps()
+      2    0.1%    0.1%  v8::internal::compiler::MoveOptimizer::OptimizeMerge(v8::internal::compiler::InstructionBlock*)
+      2    0.1%    0.1%  v8::internal::compiler::MoveOptimizer::FinalizeMoves(v8::internal::compiler::Instruction*)
+      2    0.1%    0.1%  v8::internal::compiler::LiveRangeBuilder::ProcessLoopHeader(v8::internal::compiler::InstructionBlock const*, v8::internal::BitVector*)
+      2    0.1%    0.1%  v8::internal::compiler::LiveRangeBuilder::LiveRangeFor(v8::internal::compiler::InstructionOperand*)
+      2    0.1%    0.1%  v8::internal::compiler::LiveRangeBuilder::Define(v8::internal::compiler::LifetimePosition, v8::internal::compiler::InstructionOperand*, void*, v8::internal::compiler::UsePositionHintType) [clone .constprop.403]
+      2    0.1%    0.1%  v8::internal::compiler::LiveRangeBuilder::Define(v8::internal::compiler::LifetimePosition, v8::internal::compiler::InstructionOperand*, void*, v8::internal::compiler::UsePositionHintType)
+      2    0.1%    0.1%  v8::internal::compiler::InstructionSequence::GetInstructionBlock(int) const
+      2    0.1%    0.1%  v8::internal::compiler::InstructionSequence::AddInstruction(v8::internal::compiler::Instruction*)
+      2    0.1%    0.1%  v8::internal::compiler::InstructionSelector::SelectInstructions()
+      2    0.1%    0.1%  v8::internal::compiler::GapResolver::Resolve(v8::internal::compiler::ParallelMove*)
+      2    0.1%    0.1%  v8::internal::compiler::GapResolver::PerformMove(v8::internal::compiler::ParallelMove*, v8::internal::compiler::MoveOperands*)
+      2    0.1%    0.1%  v8::internal::Scanner::ScanIdentifierOrKeyword()
+      2    0.1%    0.1%  v8::internal::IncrementalMarking::ProcessWeakCells()
+      2    0.1%    0.1%  v8::internal::AstValue::IsPropertyName() const
+      2    0.1%    0.1%  std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)
+      2    0.1%    0.1%  node::Binding(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.1%    0.1%  __GI___pthread_mutex_unlock
+      2    0.1%    0.1%  __GI___pthread_mutex_lock
+      1    0.0%    0.0%  void v8::internal::String::WriteToFlat<unsigned short>(v8::internal::String*, unsigned short*, int, int)
+      1    0.0%    0.0%  void v8::internal::ScavengingVisitor<(v8::internal::MarksHandling)1, (v8::internal::LoggingAndProfiling)0>::EvacuateObject<(v8::internal::ScavengingVisitor<(v8::internal::MarksHandling)1, (v8::internal::LoggingAndProfiling)0>::ObjectContents)1, (v8::internal::AllocationAlignment)0>(v8::internal::Map*, v8::internal::HeapObject**, v8::internal::HeapObject*, int)
+      1    0.0%    0.0%  void std::vector<v8::internal::compiler::Node*, v8::internal::ZoneAllocator<v8::internal::compiler::Node*> >::_M_emplace_back_aux<v8::internal::compiler::Node* const&>(v8::internal::compiler::Node* const&)
+      1    0.0%    0.0%  void std::vector<v8::internal::compiler::Constant, v8::internal::ZoneAllocator<v8::internal::compiler::Constant> >::_M_emplace_back_aux<v8::internal::compiler::Constant const&>(v8::internal::compiler::Constant const&)
+      1    0.0%    0.0%  void std::swap<v8::internal::Page>(v8::internal::Page&, v8::internal::Page&)
+      1    0.0%    0.0%  void std::__introsort_loop<v8::internal::Smi**, long, v8::internal::EnumIndexComparator<v8::internal::NameDictionary> >(v8::internal::Smi**, v8::internal::Smi**, long, v8::internal::EnumIndexComparator<v8::internal::NameDictionary>)
+      1    0.0%    0.0%  void std::__adjust_heap<__gnu_cxx::__normal_iterator<v8::internal::compiler::LiveRange**, std::vector<v8::internal::compiler::LiveRange*, v8::internal::ZoneAllocator<v8::internal::compiler::LiveRange*> > >, long, v8::internal::compiler::LiveRange*, bool (*)(v8::internal::compiler::LiveRange*, v8::internal::compiler::LiveRange*)>(__gnu_cxx::__normal_iterator<v8::internal::compiler::LiveRange**, std::vector<v8::internal::compiler::LiveRange*, v8::internal::ZoneAllocator<v8::internal::compiler::LiveRange*> > >, long, long, v8::internal::compiler::LiveRange*, bool (*)(v8::internal::compiler::LiveRange*, v8::internal::compiler::LiveRange*)) [clone .constprop.394]
+      1    0.0%    0.0%  v8::internal::interpreter::SetupInterpreter::InstallBytecodeHandler(v8::internal::Isolate*, unsigned char**, v8::internal::interpreter::Bytecode, v8::internal::interpreter::OperandScale)
+      1    0.0%    0.0%  v8::internal::interpreter::ConstantArrayBuilder::Insert(v8::internal::AstRawString const*)
+      1    0.0%    0.0%  v8::internal::interpreter::ConstantArrayBuilder::CreateReservedEntry()
+      1    0.0%    0.0%  v8::internal::compiler::UsePosition::HintTypeForOperand(v8::internal::compiler::InstructionOperand const&)
+      1    0.0%    0.0%  v8::internal::compiler::SpillRange::TryMerge(v8::internal::compiler::SpillRange*)
+      1    0.0%    0.0%  v8::internal::compiler::SpillRange::SpillRange(v8::internal::compiler::TopLevelLiveRange*, v8::internal::Zone*)
+      1    0.0%    0.0%  v8::internal::compiler::Schedule::EnsureSplitEdgeForm(v8::internal::compiler::BasicBlock*)
+      1    0.0%    0.0%  v8::internal::compiler::Schedule::AddNode(v8::internal::compiler::BasicBlock*, v8::internal::compiler::Node*)
+      1    0.0%    0.0%  v8::internal::compiler::RegisterAllocator::SplitRangeAt(v8::internal::compiler::LiveRange*, v8::internal::compiler::LifetimePosition)
+      1    0.0%    0.0%  v8::internal::compiler::RegisterAllocationData::GetOrCreateLiveRangeFor(int)
+      1    0.0%    0.0%  v8::internal::compiler::RedundancyElimination::Reduce(v8::internal::compiler::Node*)
+      1    0.0%    0.0%  v8::internal::compiler::RawMachineAssembler::Branch(v8::internal::compiler::Node*, v8::internal::compiler::RawMachineLabel*, v8::internal::compiler::RawMachineLabel*)
+      1    0.0%    0.0%  v8::internal::compiler::PhiInstruction::PhiInstruction(v8::internal::Zone*, int, unsigned long)
+      1    0.0%    0.0%  v8::internal::compiler::ParallelMove::PrepareInsertAfter(v8::internal::compiler::MoveOperands*, v8::internal::ZoneVector<v8::internal::compiler::MoveOperands*>*) const
+      1    0.0%    0.0%  v8::internal::compiler::MoveOptimizer::Run()
+      1    0.0%    0.0%  v8::internal::compiler::MoveOptimizer::CompressGaps(v8::internal::compiler::Instruction*)
+      1    0.0%    0.0%  v8::internal::compiler::LiveRangeConnector::ConnectRanges(v8::internal::Zone*)
+      1    0.0%    0.0%  v8::internal::compiler::LiveRangeConnector::CommitSpillsInDeferredBlocks(v8::internal::compiler::TopLevelLiveRange*, v8::internal::compiler::LiveRangeBoundArray*, v8::internal::Zone*)
+      1    0.0%    0.0%  v8::internal::compiler::LiveRangeBuilder::NewUsePosition(v8::internal::compiler::LifetimePosition, v8::internal::compiler::InstructionOperand*, void*, v8::internal::compiler::UsePositionHintType)
+      1    0.0%    0.0%  v8::internal::compiler::LiveRangeBuilder::ComputeLiveOut(v8::internal::compiler::InstructionBlock const*, v8::internal::compiler::RegisterAllocationData*)
+      1    0.0%    0.0%  v8::internal::compiler::LiveRange::DetachAt(v8::internal::compiler::LifetimePosition, v8::internal::compiler::LiveRange*, v8::internal::Zone*, v8::internal::compiler::LiveRange::HintConnectionOption)
+      1    0.0%    0.0%  v8::internal::compiler::LinearScanAllocator::TryAllocatePreferredReg(v8::internal::compiler::LiveRange*, v8::internal::Vector<v8::internal::compiler::LifetimePosition> const&)
+      1    0.0%    0.0%  v8::internal::compiler::LinearScanAllocator::SpillBetweenUntil(v8::internal::compiler::LiveRange*, v8::internal::compiler::LifetimePosition, v8::internal::compiler::LifetimePosition, v8::internal::compiler::LifetimePosition)
+      1    0.0%    0.0%  v8::internal::compiler::LinearScanAllocator::SortUnhandled()
+      1    0.0%    0.0%  v8::internal::compiler::LinearScanAllocator::ProcessCurrentRange(v8::internal::compiler::LiveRange*)
+      1    0.0%    0.0%  v8::internal::compiler::LinearScanAllocator::AllocateBlockedReg(v8::internal::compiler::LiveRange*)
+      1    0.0%    0.0%  v8::internal::compiler::InstructionSequence::NextVirtualRegister()
+      1    0.0%    0.0%  v8::internal::compiler::InstructionSelector::VisitControl(v8::internal::compiler::BasicBlock*)
+      1    0.0%    0.0%  v8::internal::compiler::InstructionSelector::VisitBlock(v8::internal::compiler::BasicBlock*)
+      1    0.0%    0.0%  v8::internal::compiler::InstructionSelector::MarkAsUsed(v8::internal::compiler::Node*)
+      1    0.0%    0.0%  v8::internal::compiler::InstructionSelector::MarkAsDefined(v8::internal::compiler::Node*)
+      1    0.0%    0.0%  v8::internal::compiler::GraphReducer::ReduceTop()
+      1    0.0%    0.0%  v8::internal::compiler::ConstraintBuilder::ResolvePhis(v8::internal::compiler::InstructionBlock const*)
+      1    0.0%    0.0%  v8::internal::compiler::ConstraintBuilder::MeetConstraintsAfter(int)
+      1    0.0%    0.0%  v8::internal::compiler::ConstraintBuilder::AllocateFixed(v8::internal::compiler::UnallocatedOperand*, int, bool)
+      1    0.0%    0.0%  v8::internal::compiler::CodeGenerator::RecordCallPosition(v8::internal::compiler::Instruction*)
+      1    0.0%    0.0%  v8::internal::compiler::CodeGenerator::AssembleCode()
+      1    0.0%    0.0%  v8::internal::compiler::CodeGenerator::AssembleArchInstruction(v8::internal::compiler::Instruction*)
+      1    0.0%    0.0%  v8::internal::compiler::CodeAssemblerVariable::~CodeAssemblerVariable()
+      1    0.0%    0.0%  v8::internal::compiler::CodeAssemblerLabel::CodeAssemblerLabel(v8::internal::compiler::CodeAssembler*, unsigned long, v8::internal::compiler::CodeAssemblerVariable* const*, v8::internal::compiler::CodeAssemblerLabel::Type)
+      1    0.0%    0.0%  v8::internal::compiler::CodeAssembler::isolate() const
+      1    0.0%    0.0%  v8::internal::compiler::CodeAssembler::ToIntPtrConstant(v8::internal::compiler::Node*, long&)
+      1    0.0%    0.0%  v8::internal::compiler::BytecodeGraphBuilder::MergeIntoSuccessorEnvironment(int)
+      1    0.0%    0.0%  v8::internal::compiler::(anonymous namespace)::RedundantStoreFinder::Visit(v8::internal::compiler::Node*)
+      1    0.0%    0.0%  v8::internal::VariableProxy::BindTo(v8::internal::Variable*)
+      1    0.0%    0.0%  v8::internal::ThreadManager::Iterate(v8::internal::RootVisitor*)
+      1    0.0%    0.0%  v8::internal::String::GetFlatContent()
+      1    0.0%    0.0%  v8::internal::StaticMarkingVisitor<v8::internal::IncrementalMarkingMarkingVisitor>::VisitSharedFunctionInfo(v8::internal::Map*, v8::internal::HeapObject*)
+      1    0.0%    0.0%  v8::internal::StaticMarkingVisitor<v8::internal::IncrementalMarkingMarkingVisitor>::MarkMapContents(v8::internal::Heap*, v8::internal::Map*)
+      1    0.0%    0.0%  v8::internal::StackFrame::ComputeType(v8::internal::StackFrameIteratorBase const*, v8::internal::StackFrame::State*)
+      1    0.0%    0.0%  v8::internal::Scavenger::SelectScavengingVisitorsTable()
+      1    0.0%    0.0%  v8::internal::Scanner::PeekAhead()
+      1    0.0%    0.0%  v8::internal::Scanner::Next()
+      1    0.0%    0.0%  v8::internal::SafepointTableBuilder::Emit(v8::internal::Assembler*, int)
+      1    0.0%    0.0%  v8::internal::RootScavengeVisitor::VisitRootPointers(v8::internal::Root, v8::internal::Object**, v8::internal::Object**)
+      1    0.0%    0.0%  v8::internal::RootScavengeVisitor::VisitRootPointer(v8::internal::Root, v8::internal::Object**)
+      1    0.0%    0.0%  v8::internal::RegExpMacroAssemblerX64::CheckNotCharacterAfterAnd(unsigned int, unsigned int, v8::internal::Label*)
+      1    0.0%    0.0%  v8::internal::ParserBase<v8::internal::Parser>::ParseLeftHandSideExpression(bool*)
+      1    0.0%    0.0%  v8::internal::ParserBase<v8::internal::Parser>::ParseFunctionBody(v8::internal::ZoneList<v8::internal::Statement*>*, v8::internal::AstRawString const*, int, v8::internal::ParserFormalParameters const&, v8::internal::FunctionKind, v8::internal::FunctionLiteral::FunctionType, bool*)
+      1    0.0%    0.0%  v8::internal::ParserBase<v8::internal::Parser>::ArrowFormalParametersUnexpectedToken()
+      1    0.0%    0.0%  v8::internal::PagedSpace::SizeOfObjects()
+      1    0.0%    0.0%  v8::internal::PagedSpace::RawSlowAllocateRaw(int)
+      1    0.0%    0.0%  v8::internal::Operand::Operand(v8::internal::Register, v8::internal::Register, v8::internal::ScaleFactor, int)
+      1    0.0%    0.0%  v8::internal::Object::AddDataProperty(v8::internal::LookupIterator*, v8::internal::Handle<v8::internal::Object>, v8::internal::PropertyAttributes, v8::internal::Object::ShouldThrow, v8::internal::Object::StoreFromKeyed)
+      1    0.0%    0.0%  v8::internal::NewSpace::ResetAllocationInfo()
+      1    0.0%    0.0%  v8::internal::NewSpace::AddFreshPage()
+      1    0.0%    0.0%  v8::internal::NameDictionaryBase<v8::internal::NameDictionary, v8::internal::NameDictionaryShape>::FindEntry(v8::internal::Handle<v8::internal::Name>)
+      1    0.0%    0.0%  v8::internal::MacroAssembler::AssertZeroExtended(v8::internal::Register)
+      1    0.0%    0.0%  v8::internal::Log::MessageBuilder::AppendDoubleQuotedString(char const*)
+      1    0.0%    0.0%  v8::internal::JSObjectWalkVisitor<v8::internal::AllocationSiteUsageContext>::StructureWalk(v8::internal::Handle<v8::internal::JSObject>)
+      1    0.0%    0.0%  v8::internal::IterateAndScavengePromotedObjectsVisitor::VisitPointers(v8::internal::HeapObject*, v8::internal::Object**, v8::internal::Object**)
+      1    0.0%    0.0%  v8::internal::InnerPointerToCodeCache::GcSafeFindCodeForInnerPointer(unsigned char*)
+      1    0.0%    0.0%  v8::internal::IncrementalMarking::UpdateMarkingDequeAfterScavenge()
+      1    0.0%    0.0%  v8::internal::Heap::PerformGarbageCollection(v8::internal::GarbageCollector, v8::GCCallbackFlags)
+      1    0.0%    0.0%  v8::internal::Heap::MarkCompactPrologue()
+      1    0.0%    0.0%  v8::internal::Heap::AllocateFixedArray(int, v8::internal::PretenureFlag)
+      1    0.0%    0.0%  v8::internal::HashTable<v8::internal::NameDictionary, v8::internal::NameDictionaryShape, v8::internal::Handle<v8::internal::Name> >::Rehash(v8::internal::Handle<v8::internal::NameDictionary>, v8::internal::Handle<v8::internal::Name>)
+      1    0.0%    0.0%  v8::internal::HashTable<v8::internal::NameDictionary, v8::internal::NameDictionaryShape, v8::internal::Handle<v8::internal::Name> >::EnsureCapacity(v8::internal::Handle<v8::internal::NameDictionary>, int, v8::internal::Handle<v8::internal::Name>, v8::internal::PretenureFlag)
+      1    0.0%    0.0%  v8::internal::Handle<v8::internal::String> v8::internal::JsonParser<true>::ScanJsonString<true>()
+      1    0.0%    0.0%  v8::internal::Handle<v8::internal::String> v8::internal::JsonParser<true>::ScanJsonString<false>()
+      1    0.0%    0.0%  v8::internal::HValue::AddDependantsToWorklist(v8::internal::HInferRepresentationPhase*)
+      1    0.0%    0.0%  v8::internal::HGoto::opcode() const
+      1    0.0%    0.0%  v8::internal::HFlowEngine<v8::internal::HLoadEliminationTable, v8::internal::HLoadEliminationEffects>::AnalyzeDominatedBlocks(v8::internal::HBasicBlock*, v8::internal::HLoadEliminationTable*)
+      1    0.0%    0.0%  v8::internal::FixedBodyVisitor<v8::internal::IncrementalMarkingMarkingVisitor, v8::internal::FixedBodyDescriptor<24, 40, 40>, void>::Visit(v8::internal::Map*, v8::internal::HeapObject*)
+      1    0.0%    0.0%  v8::internal::Factory::NewFixedArray(int, v8::internal::PretenureFlag)
+      1    0.0%    0.0%  v8::internal::ExternalOneByteStringUtf16CharacterStream::FillBuffer(unsigned long)
+      1    0.0%    0.0%  v8::internal::EmitDoubleBoundaryTest(v8::internal::RegExpMacroAssembler*, int, int, v8::internal::Label*, v8::internal::Label*, v8::internal::Label*)
+      1    0.0%    0.0%  v8::internal::Builtin_ObjectSetPrototypeOf(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.0%    0.0%  v8::internal::Assembler::jmp(v8::internal::Label*, v8::internal::Label::Distance)
+      1    0.0%    0.0%  v8::internal::Assembler::emit_lea(v8::internal::Register, v8::internal::Operand const&, int)
+      1    0.0%    0.0%  v8::internal::AccountingAllocator::ReturnSegment(v8::internal::Segment*)
+      1    0.0%    0.0%  sysconf
+      1    0.0%    0.0%  std::vector<v8::internal::MachineRepresentation, v8::internal::ZoneAllocator<v8::internal::MachineRepresentation> >::_M_fill_insert(__gnu_cxx::__normal_iterator<v8::internal::MachineRepresentation*, std::vector<v8::internal::MachineRepresentation, v8::internal::ZoneAllocator<v8::internal::MachineRepresentation> > >, unsigned long, v8::internal::MachineRepresentation const&)
+      1    0.0%    0.0%  std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
+      1    0.0%    0.0%  operator new(unsigned long)
+      1    0.0%    0.0%  node::InternalModuleStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  do_futex_wait.constprop.3
+      1    0.0%    0.0%  bool v8::internal::LookupIterator::SkipInterceptor<false>(v8::internal::JSObject*)
+      1    0.0%    0.0%  _IO_padn
+      1    0.0%    0.0%  _IO_default_xsputn
+
+ [Summary]:
+   ticks  total  nonlib   name
+   1345   38.8%   39.2%  JavaScript
+   1915   55.3%   55.9%  C++
+    182    5.3%    5.3%  GC
+     35    1.0%          Shared libraries
+    168    4.9%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+   1157   74.6%   33.4%  v8::internal::Runtime_NumberToString(int, v8::internal::Object**, v8::internal::Isolate*)
+    303   19.5%    8.7%  v8::internal::Runtime_GrowArrayElements(int, v8::internal::Object**, v8::internal::Isolate*)
+     43    2.8%    1.2%  v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+     14    0.9%    0.4%  v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      9    0.6%    0.3%  v8::internal::Builtin_JsonParse(int, v8::internal::Object**, v8::internal::Isolate*)
+      3    0.2%    0.1%  v8::internal::Runtime_CompileOptimized_NotConcurrent(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    0.1%    0.1%  v8::internal::Runtime_StoreIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    0.1%    0.1%  v8::internal::Runtime_StackGuard(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    0.1%    0.1%  v8::internal::Runtime_SetProperty(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    0.1%    0.1%  v8::internal::Runtime_RegExpExec(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    0.1%    0.1%  v8::internal::Runtime_LoadIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    0.1%    0.1%  v8::internal::Runtime_CompileOptimized_Concurrent(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    0.1%    0.1%  v8::internal::Runtime_CompileForOnStackReplacement(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  v8::internal::Scanner::ScanIdentifierOrKeyword()
+      1    0.1%    0.0%  v8::internal::Runtime_SetCode(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  v8::internal::Runtime_ObjectKeys(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  v8::internal::Runtime_Interrupt(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  v8::internal::Runtime_DefineGetterPropertyUnchecked(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  v8::internal::Runtime_CreateObjectLiteral(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  v8::internal::Runtime_AllocateInNewSpace(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.1%    0.0%  v8::internal::Builtin_ObjectSetPrototypeOf(int, v8::internal::Object**, v8::internal::Isolate*)
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+    440   12.7%  Stub: StringAddStub_CheckNone_NotTenured
+    440  100.0%    LazyCompile: *derez /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:46:27
+    440  100.0%      Function: ~decycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:24:33
+    440  100.0%        Function: ~runOrigDecycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:31:24
+    440  100.0%          Function: ~runCpuIntensiveTask /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:19:29
+    440  100.0%            Function: ~<anonymous> /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:1:11
+
+    398   11.5%  Builtin: KeyedLoadIC_Megamorphic
+    201   50.5%    Handler: prototype
+    201  100.0%      Function: ~decycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/fixed_cycle.js:24:33
+    201  100.0%        Function: ~runFixedDecycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:37:25
+    201  100.0%          Function: ~runCpuIntensiveTask /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:19:29
+    201  100.0%            Function: ~<anonymous> /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:1:11
+    197   49.5%    LazyCompile: *derez /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:46:27
+    197  100.0%      Function: ~decycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:24:33
+    197  100.0%        Function: ~runOrigDecycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:31:24
+    197  100.0%          Function: ~runCpuIntensiveTask /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:19:29
+    197  100.0%            Function: ~<anonymous> /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:1:11
+
+    290    8.4%  LazyCompile: *derez /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:46:27
+    187   64.5%    Function: ~decycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:24:33
+    187  100.0%      Function: ~runOrigDecycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:31:24
+    187  100.0%        Function: ~runCpuIntensiveTask /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:19:29
+    187  100.0%          Function: ~<anonymous> /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:1:11
+    187  100.0%            Function: ~Module._compile module.js:530:37
+    103   35.5%    LazyCompile: *derez /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:46:27
+    103  100.0%      Function: ~decycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:24:33
+    103  100.0%        Function: ~runOrigDecycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:31:24
+    103  100.0%          Function: ~runCpuIntensiveTask /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:19:29
+    103  100.0%            Function: ~<anonymous> /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:1:11
+
+    287    8.3%  v8::internal::IntToCString(int, v8::internal::Vector<char>)
+    287  100.0%    v8::internal::Runtime_NumberToString(int, v8::internal::Object**, v8::internal::Isolate*)
+    287  100.0%      LazyCompile: *derez /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:46:27
+    287  100.0%        Function: ~decycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:24:33
+    287  100.0%          Function: ~runOrigDecycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:31:24
+    287  100.0%            Function: ~runCpuIntensiveTask /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:19:29
+
+    176    5.1%  v8::internal::Heap::AllocateRawOneByteString(int, v8::internal::PretenureFlag)
+    175   99.4%    v8::internal::Runtime_NumberToString(int, v8::internal::Object**, v8::internal::Isolate*)
+    175  100.0%      LazyCompile: *derez /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:46:27
+    175  100.0%        Function: ~decycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:24:33
+    175  100.0%          Function: ~runOrigDecycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:31:24
+    175  100.0%            Function: ~runCpuIntensiveTask /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:19:29
+
+    168    4.9%  UNKNOWN
+
+    152    4.4%  v8::internal::(anonymous namespace)::CopyObjectToObjectElements(v8::internal::FixedArrayBase*, v8::internal::ElementsKind, unsigned int, v8::internal::FixedArrayBase*, v8::internal::ElementsKind, unsigned int, int)
+    152  100.0%    v8::internal::Runtime_GrowArrayElements(int, v8::internal::Object**, v8::internal::Isolate*)
+    152  100.0%      LazyCompile: *derez /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:46:27
+    152  100.0%        Function: ~decycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:24:33
+    152  100.0%          Function: ~runOrigDecycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:31:24
+    152  100.0%            Function: ~runCpuIntensiveTask /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:19:29
+
+    132    3.8%  v8::internal::LargeObjectSpace::AllocateRaw(int, v8::internal::Executability)
+    132  100.0%    v8::internal::Runtime_GrowArrayElements(int, v8::internal::Object**, v8::internal::Isolate*)
+    132  100.0%      LazyCompile: *derez /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:46:27
+    132  100.0%        Function: ~decycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:24:33
+    132  100.0%          Function: ~runOrigDecycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:31:24
+    132  100.0%            Function: ~runCpuIntensiveTask /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:19:29
+
+    125    3.6%  v8::internal::Factory::SetNumberStringCache(v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::String>)
+    125  100.0%    v8::internal::Runtime_NumberToString(int, v8::internal::Object**, v8::internal::Isolate*)
+    124   99.2%      LazyCompile: *derez /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:46:27
+    124  100.0%        Function: ~decycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:24:33
+    124  100.0%          Function: ~runOrigDecycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:31:24
+    124  100.0%            Function: ~runCpuIntensiveTask /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:19:29
+
+     98    2.8%  v8::internal::Heap::AllocateRaw(int, v8::internal::AllocationSpace, v8::internal::AllocationAlignment)
+     97   99.0%    v8::internal::Runtime_NumberToString(int, v8::internal::Object**, v8::internal::Isolate*)
+     97  100.0%      LazyCompile: *derez /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:46:27
+     97  100.0%        Function: ~decycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:24:33
+     97  100.0%          Function: ~runOrigDecycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:31:24
+     97  100.0%            Function: ~runCpuIntensiveTask /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:19:29
+      1    1.0%    v8::internal::Runtime_LoadIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      Function: ~dirname path.js:1351:28
+      1  100.0%        Function: ~Module._resolveLookupPaths module.js:331:38
+      1  100.0%          Function: ~Module._resolveFilename module.js:479:35
+      1  100.0%            Function: ~Module._load module.js:434:24
+
+     97    2.8%  strlen
+     97  100.0%    v8::internal::Runtime_NumberToString(int, v8::internal::Object**, v8::internal::Isolate*)
+     97  100.0%      LazyCompile: *derez /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:46:27
+     97  100.0%        Function: ~decycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:24:33
+     97  100.0%          Function: ~runOrigDecycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:31:24
+     97  100.0%            Function: ~runCpuIntensiveTask /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:19:29
+
+     76    2.2%  v8::internal::IncrementalMarking::WhiteToGreyAndPush(v8::internal::HeapObject*)
+      1    1.3%    v8::internal::Runtime_NumberToString(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      LazyCompile: *derez /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:46:27
+      1  100.0%        Function: ~decycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:24:33
+      1  100.0%          Function: ~runOrigDecycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:31:24
+      1  100.0%            Function: ~runCpuIntensiveTask /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:19:29
+
+     69    2.0%  v8::internal::Factory::NewStringFromOneByte(v8::internal::Vector<unsigned char const>, v8::internal::PretenureFlag)
+     69  100.0%    v8::internal::Runtime_NumberToString(int, v8::internal::Object**, v8::internal::Isolate*)
+     68   98.6%      LazyCompile: *derez /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:46:27
+     68  100.0%        Function: ~decycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:24:33
+     68  100.0%          Function: ~runOrigDecycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:31:24
+     68  100.0%            Function: ~runCpuIntensiveTask /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:19:29
+      1    1.4%      Function: ~derez /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:46:27
+      1  100.0%        Function: ~decycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:24:33
+      1  100.0%          Function: ~runOrigDecycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:31:24
+      1  100.0%            Function: ~runCpuIntensiveTask /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:19:29
+
+     63    1.8%  v8::internal::Factory::NumberToString(v8::internal::Handle<v8::internal::Object>, bool)
+     63  100.0%    v8::internal::Runtime_NumberToString(int, v8::internal::Object**, v8::internal::Isolate*)
+     63  100.0%      LazyCompile: *derez /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:46:27
+     63  100.0%        Function: ~decycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:24:33
+     63  100.0%          Function: ~runOrigDecycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:31:24
+     63  100.0%            Function: ~runCpuIntensiveTask /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:19:29
+
+     57    1.6%  v8::internal::Factory::NewRawOneByteString(int, v8::internal::PretenureFlag)
+     57  100.0%    v8::internal::Runtime_NumberToString(int, v8::internal::Object**, v8::internal::Isolate*)
+     57  100.0%      LazyCompile: *derez /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:46:27
+     57  100.0%        Function: ~decycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:24:33
+     57  100.0%          Function: ~runOrigDecycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:31:24
+     57  100.0%            Function: ~runCpuIntensiveTask /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:19:29
+
+     50    1.4%  Stub: StringAddStub_ConvertRight_NotTenured
+     50  100.0%    LazyCompile: *derez /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:46:27
+     50  100.0%      Function: ~decycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:24:33
+     50  100.0%        Function: ~runOrigDecycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:31:24
+     50  100.0%          Function: ~runCpuIntensiveTask /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:19:29
+     50  100.0%            Function: ~<anonymous> /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:1:11
+
+     48    1.4%  Builtin: KeyedLoadIC
+     25   52.1%    LazyCompile: *derez /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:46:27
+     22   88.0%      Function: ~decycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:24:33
+     22  100.0%        Function: ~runOrigDecycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:31:24
+     22  100.0%          Function: ~runCpuIntensiveTask /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:19:29
+     22  100.0%            Function: ~<anonymous> /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:1:11
+      3   12.0%      LazyCompile: *derez /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:46:27
+      3  100.0%        Function: ~decycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:24:33
+      3  100.0%          Function: ~runOrigDecycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:31:24
+      3  100.0%            Function: ~runCpuIntensiveTask /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:19:29
+     14   29.2%    Function: ~decycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/fixed_cycle.js:24:33
+     14  100.0%      Function: ~runFixedDecycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:37:25
+     14  100.0%        Function: ~runCpuIntensiveTask /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:19:29
+     14  100.0%          Function: ~<anonymous> /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:1:11
+     14  100.0%            Function: ~Module._compile module.js:530:37
+      9   18.8%    Handler: prototype
+      9  100.0%      Function: ~decycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/fixed_cycle.js:24:33
+      9  100.0%        Function: ~runFixedDecycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:37:25
+      9  100.0%          Function: ~runCpuIntensiveTask /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:19:29
+      9  100.0%            Function: ~<anonymous> /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:1:11
+
+     40    1.2%  v8::internal::PagedSpace::AllocateRawUnaligned(int, v8::internal::PagedSpace::UpdateSkipList)
+     40  100.0%    v8::internal::Runtime_NumberToString(int, v8::internal::Object**, v8::internal::Isolate*)
+     40  100.0%      LazyCompile: *derez /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:46:27
+     40  100.0%        Function: ~decycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:24:33
+     40  100.0%          Function: ~runOrigDecycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:31:24
+     40  100.0%            Function: ~runCpuIntensiveTask /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:19:29
+
+     40    1.2%  v8::internal::IncrementalMarkingMarkingVisitor::VisitFixedArrayIncremental(v8::internal::Map*, v8::internal::HeapObject*)
+
+     40    1.2%  v8::internal::Factory::GetNumberStringCache(v8::internal::Handle<v8::internal::Object>)
+     40  100.0%    v8::internal::Runtime_NumberToString(int, v8::internal::Object**, v8::internal::Isolate*)
+     40  100.0%      LazyCompile: *derez /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:46:27
+     40  100.0%        Function: ~decycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:24:33
+     40  100.0%          Function: ~runOrigDecycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:31:24
+     40  100.0%            Function: ~runCpuIntensiveTask /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:19:29
+
+     40    1.2%  node::(anonymous namespace)::ContextifyScript::New(v8::FunctionCallbackInfo<v8::Value> const&)
+     40  100.0%    v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+     25   62.5%      Function: ~runInThisContext bootstrap_node.js:485:28
+     25  100.0%        Function: ~NativeModule.compile bootstrap_node.js:574:44
+     25  100.0%          Function: ~NativeModule.require bootstrap_node.js:506:34
+      4   16.0%            Function: ~Module._load module.js:434:24
+      3   12.0%            Function: ~<anonymous> internal/child_process.js:1:11
+      3   12.0%            Function: ~<anonymous> http.js:1:11
+      3   12.0%            Function: ~<anonymous> fs.js:1:11
+      2    8.0%            Function: ~setupGlobalVariables bootstrap_node.js:215:32
+      2    8.0%            Function: ~<anonymous> stream.js:1:11
+      2    8.0%            Function: ~<anonymous> module.js:1:11
+      1    4.0%            Function: ~setupNextTick internal/process/next_tick.js:49:23
+      1    4.0%            Function: ~setupInspectorCommandLineAPI bootstrap_node.js:314:40
+      1    4.0%            Function: ~<anonymous> util.js:1:11
+      1    4.0%            Function: ~<anonymous> timers.js:1:11
+      1    4.0%            Function: ~<anonymous> child_process.js:1:11
+      1    4.0%            Function: ~<anonymous> _http_common.js:1:11
+     15   37.5%      Function: ~createScript vm.js:73:22
+     15  100.0%        Function: ~runInThisContext vm.js:115:26
+     15  100.0%          Function: ~Module._compile module.js:530:37
+     15  100.0%            Function: ~Module._extensions..js module.js:582:37
+
+     38    1.1%  Stub: CEntryStub
+     30   78.9%    v8::internal::Runtime_NumberToString(int, v8::internal::Object**, v8::internal::Isolate*)
+     30  100.0%      LazyCompile: *derez /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:46:27
+     30  100.0%        Function: ~decycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:24:33
+     30  100.0%          Function: ~runOrigDecycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:31:24
+     30  100.0%            Function: ~runCpuIntensiveTask /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:19:29
+      8   21.1%    LazyCompile: *derez /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:46:27
+      8  100.0%      Function: ~decycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/node_modules/cycle/cycle.js:24:33
+      8  100.0%        Function: ~runOrigDecycle /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:31:24
+      8  100.0%          Function: ~runCpuIntensiveTask /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:19:29
+      8  100.0%            Function: ~<anonymous> /home/ukrbublik/projs/habr_arcticle_1/0-profiling/app0.js:1:11
+
