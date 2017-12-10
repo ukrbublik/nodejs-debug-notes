@@ -7,7 +7,8 @@ Browser with url `http://localhost:5001/` should be opened.
 Open inspector `chrome:://inspect`, click `Run CPU intensive task` and record CPU profile.
 
 
+Or
 Start app in prof mode:  
  `npm run prof`  
-Profile report will be generated automaticalled and put in `prof-reports` dir.  
+Profile report will be generated automatically and put in `prof-reports` dir.  
 You can investigate it for `runCpuIntensiveTask()` call.
