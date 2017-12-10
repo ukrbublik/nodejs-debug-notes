@@ -1,0 +1,28 @@
+<!doctype html>  
+<html lang="en">  
+<head>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+            $("#infLoop").click(function() {
+                $.post("/infLoop", {}, function(res) {
+                    if (res.res == 'ok') {
+                        alert("ok");
+                    } else {
+                        alert(res.err);
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Test app 1</h1>
+    <button id="infLoop">Make inf loop</button>
+    <br>
+    <pre>
+    Run in cmd to break inf loop: `npm run terminate-loop`
+    </pre>
+</body>
+</html>
+

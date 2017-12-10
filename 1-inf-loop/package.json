@@ -1,0 +1,17 @@
+{
+  "name": "1-inf-loop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app1.js",
+  "scripts": {
+    "start": "node app1.js",
+    "terminate-loop": "./loop-terminator.sh --pfind='node app1.js' --logs-dir='./gdb-logs'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ukrbublik",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "opn": "^5.1.0"
+  }
+}

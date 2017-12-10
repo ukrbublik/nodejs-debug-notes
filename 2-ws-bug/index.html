@@ -1,0 +1,67 @@
+<!doctype html>  
+<html lang="en">  
+<head>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+            var listenPort = 5002;
+            var socket;
+            socket = io.connect('http://localhost:'+listenPort);
+
+            $("#btnConnect").click(function() {
+                socket.connect();
+            });
+
+            $("#btnDisconnect").click(function() {
+                socket.disconnect();
+            });
+
+            $("#btnRecreateWorker").click(function() {
+                $.post("/recreateWorker", {}, function(res) {
+                    if (res.res == 'ok') {
+                        alert("Worker has been recreated");
+                    } else {
+                        alert(res.err);
+                    }
+                });
+            });
+
+            socket.on('connect', function(data) {
+                $('#btnConnect').html("Connected");
+                $('#btnConnect').attr('disabled', true);
+                $('#btnDisconnect').attr('disabled', false);
+                console.log("connected");
+            });
+
+            socket.on('disconnect', function(reason) {
+                $('#btnConnect').html("Connect");
+                $('#btnDisconnect').attr('disabled', true);
+                $('#btnConnect').attr('disabled', false);
+                console.warn('disconnected');
+            });
+
+            socket.on('error', function(err) {
+                console.error('error', err);
+            });
+
+            socket.on('connect_error', function(err) {
+                console.error('connect_error', err);
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Test app 2</h1>
+    <button id="btnConnect" disabled>Connect</button>
+    <button id="btnRecreateWorker">Recreate worker</button>
+    <button id="btnDisconnect" disabled>Disconnect</button>
+    <br>
+    <pre>
+    For nodejs < 8.5.0 (tested on 8.4.0)
+    After WS is connected, press "Recreate worker", then "Disconnect"
+    You will get 100% load of 1 CPU core on server
+    </pre>
+</body>
+</html>
+
