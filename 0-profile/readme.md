@@ -3,7 +3,7 @@ Install packages:
 
 Start server in inspect mode:  
  `npm run inspect`  
-Browser with url `http://localhost:5001/` should be opened. 
+Browser with url `http://localhost:5001/` should be opened.  
 Open inspector `chrome:://inspect`, click `Run CPU intensive task` and record CPU profile.
 
 
