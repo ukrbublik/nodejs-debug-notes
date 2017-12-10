@@ -1,7 +1,7 @@
 For nodejs < 8.5.0 (tested on 8.4.0)
 
 Install packages:  
- `npm i`
+ `npm i`  
 Use nodejs < 8.5.0:  
  `nvm install 8.4.0`  
  `nvm use 8.4.0`
