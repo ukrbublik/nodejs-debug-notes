@@ -1,5 +1,12 @@
 Install gdb:  
- `sudo apt-get install libc6-dbg gdb valgrind`  
+ `sudo apt-get install libc6-dbg libc-dbg gdb valgrind`  
+For docker add param to run cmd:  
+`--cap-add=SYS_PTRACE`  
+For docker-compose.yml add:  
+`
+    cap_add:
+      - SYS_PTRACE
+`  
 Install packages:  
  `npm i`
 
