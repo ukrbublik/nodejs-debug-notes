@@ -55,7 +55,7 @@ if [ -z "$_PID" ]; then
 fi
 
 if ! [ -d $_LOGS_DIR ]; then
-  mkdir $_LOGS_DIR
+  mkdir -p $_LOGS_DIR
 fi
 
 ########################### show help
