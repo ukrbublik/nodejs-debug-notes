@@ -56,6 +56,7 @@ fi
 
 if ! [ -d $_LOGS_DIR ]; then
   mkdir -p $_LOGS_DIR
+  chmod 777 $_LOGS_DIR
 fi
 
 ########################### show help
@@ -106,7 +107,7 @@ else
         -ex "b v8::internal::Runtime_StackGuard" \
         -ex "p 'v8::Isolate::GetCurrent'()" \
         -ex "p dup(1)" \
-        -ex "p open(\"$TRACE_FULLPATH\", 66, 0666)" \
+        -ex "p open(\"$TRACE_FULLPATH\", 66, 0777)" \
         -ex "p 'v8::Isolate::TerminateExecution'(\$1)" \
         -ex "c" \
         -ex "p dup2(\$3, 1)" \
