@@ -62,9 +62,9 @@ fi
 
 if test "x$_WANT_HELP" = xYES; then
   cat <<EOF
-Terminate nodejs infinite loop.
+Terminate nodejs infinite loop or other blocking code.
 GDB should be installed.
-You should have admin priviliges.
+You should have root priviliges.
 
 Usage: $0 {--pid=PID or --pfind=PFIND} [--logs-dir=<path>]
 
@@ -82,8 +82,9 @@ test -n "$_WANT_HELP" && exit 0
 ########################### run gdb
 
 if [ -z "$_LOGS_DIR" ]; then
-    sudo gdb -p $_PID \
+    gdb -p $_PID \
         -batch \
+        -ex "handle SIGPIPE nostop noprint pass" \
         -ex "b v8::internal::Runtime_StackGuard" \
         -ex "p 'v8::Isolate::GetCurrent'()" \
         -ex "p 'v8::Isolate::TerminateExecution'(\$1)" \
@@ -99,8 +100,9 @@ else
     TRACE_PATH="$_LOGS_DIR/$TRACE_FILENAME"
     TRACE_FULLPATH=`realpath "$TRACE_PATH"`
     touch "$TRACE_FULLPATH"
-    sudo gdb -p $_PID \
+    gdb -p $_PID \
         -batch \
+        -ex "handle SIGPIPE nostop noprint pass" \
         -ex "b v8::internal::Runtime_StackGuard" \
         -ex "p 'v8::Isolate::GetCurrent'()" \
         -ex "p 'v8::Isolate::TerminateExecution'(\$1)" \
