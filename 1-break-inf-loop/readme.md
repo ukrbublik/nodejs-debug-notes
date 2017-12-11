@@ -3,10 +3,10 @@ Install gdb:
 For docker add param to run cmd:  
 `--cap-add=SYS_PTRACE`  
 For docker-compose.yml add:  
-`
+```
     cap_add:
       - SYS_PTRACE
-`  
+```  
 Install packages:  
  `npm i`
 
