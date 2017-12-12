@@ -56,15 +56,16 @@ fi
 
 if ! [ -d $_LOGS_DIR ]; then
   mkdir -p $_LOGS_DIR
+  chmod 777 $_LOGS_DIR
 fi
 
 ########################### show help
 
 if test "x$_WANT_HELP" = xYES; then
   cat <<EOF
-Terminate nodejs infinite loop.
+Terminate nodejs infinite loop or other blocking code.
 GDB should be installed.
-You should have admin priviliges.
+You should have root priviliges.
 
 Usage: $0 {--pid=PID or --pfind=PFIND} [--logs-dir=<path>]
 
@@ -82,7 +83,7 @@ test -n "$_WANT_HELP" && exit 0
 ########################### run gdb
 
 if [ -z "$_LOGS_DIR" ]; then
-    sudo gdb -p $_PID \
+    gdb -p $_PID \
         -batch \
         -ex "b v8::internal::Runtime_StackGuard" \
         -ex "p 'v8::Isolate::GetCurrent'()" \
@@ -98,16 +99,22 @@ else
     TRACE_FILENAME="$NOW.txt"
     TRACE_PATH="$_LOGS_DIR/$TRACE_FILENAME"
     TRACE_FULLPATH=`realpath "$TRACE_PATH"`
-    touch "$TRACE_FULLPATH"
-    sudo gdb -p $_PID \
+    #touch "$TRACE_FULLPATH"
+    # $1 - GetCurrent, $2 - stdout_copy, $3 - fd of log
+    gdb -p $_PID \
         -batch \
+        -ex "handle SIGPIPE nostop noprint pass" \
         -ex "b v8::internal::Runtime_StackGuard" \
         -ex "p 'v8::Isolate::GetCurrent'()" \
+        -ex "p dup(1)" \
+        -ex "p open(\"$TRACE_FULLPATH\", 66, 0777)" \
         -ex "p 'v8::Isolate::TerminateExecution'(\$1)" \
         -ex "c" \
-        -ex "p close(1)" \
-        -ex "p open(\"$TRACE_FULLPATH\", 1)" \
+        -ex "p dup2(\$3, 1)" \
         -ex "p 'v8::internal::Runtime_DebugTrace'(0, 0, (void *)(\$1))" \
+        -ex "p dup2(\$2, 1)" \
+        -ex "p close(\$2)" \
+        -ex "p close(\$3)" \
         -ex "detach" \
         -ex "quit"
     echo "==========="
