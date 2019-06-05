@@ -1,8 +1,8 @@
 # nodejs-debug-notes
 
-Sample apps for article @ habrahabr
+Sample apps for my article
 
 - Rus:
-[Поиск проблем производительности NodeJs приложения (с примерами)](https://habrahabr.ru/post/344672/)
+[habrahabr - Поиск проблем производительности NodeJs приложения (с примерами)](https://habrahabr.ru/post/344672/)
 - Eng:
 [translation](https://github.com/ukrbublik/nodejs-debug-notes/blob/master/article_eng.md)
